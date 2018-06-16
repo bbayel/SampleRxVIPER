@@ -12,6 +12,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EnrollmentUserInfosController" customModule="smiile" customModuleProvider="target">
             <connections>
+                <outlet property="tfFirstName" destination="cqQ-Kj-lPu" id="WE8-OJ-Mdi"/>
+                <outlet property="tfLastName" destination="HfZ-tS-BAx" id="Eab-Gu-9cJ"/>
                 <outlet property="view" destination="iN0-l3-epB" id="gEi-h7-8rz"/>
             </connections>
         </placeholder>
@@ -20,34 +22,50 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="BHR-9d-KRF">
-                    <rect key="frame" x="40" y="40" width="295" height="85"/>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="BHR-9d-KRF">
+                    <rect key="frame" x="40" y="40" width="295" height="135.5"/>
                     <subviews>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Prénom" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cqQ-Kj-lPu" customClass="TextField" customModule="smiile" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="295" height="35"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="35" id="gIs-3J-pUz"/>
-                            </constraints>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QrX-jF-J0W" customClass="Label" customModule="smiile" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="295" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next"/>
+                            <nil key="highlightedColor"/>
                             <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="string" keyPath="fontStyle" value="regular15"/>
-                                <userDefinedRuntimeAttribute type="string" keyPath="colorStyle" value="black"/>
-                                <userDefinedRuntimeAttribute type="string" keyPath="localizedPlaceholder" value="Prénom"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="Veuillez renseigner quelques informations sur vous."/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="fontStyle" value="regular17"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="colorStyle" value="white"/>
                             </userDefinedRuntimeAttributes>
-                        </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nom" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HfZ-tS-BAx" customClass="TextField" customModule="smiile" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="50" width="295" height="35"/>
-                            <nil key="textColor"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="string" keyPath="fontStyle" value="regular15"/>
-                                <userDefinedRuntimeAttribute type="string" keyPath="colorStyle" value="black"/>
-                                <userDefinedRuntimeAttribute type="string" keyPath="localizedPlaceholder" value="Nom"/>
-                            </userDefinedRuntimeAttributes>
-                        </textField>
+                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="MbS-7T-Mrp">
+                            <rect key="frame" x="0.0" y="50.5" width="295" height="85"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Prénom" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cqQ-Kj-lPu" customClass="TextField" customModule="smiile" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="295" height="35"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="35" id="gIs-3J-pUz"/>
+                                    </constraints>
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="next" textContentType="name"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="fontStyle" value="regular15"/>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="colorStyle" value="black"/>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="localizedPlaceholder" value="Prénom"/>
+                                    </userDefinedRuntimeAttributes>
+                                </textField>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nom" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HfZ-tS-BAx" customClass="TextField" customModule="smiile" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="50" width="295" height="35"/>
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done" textContentType="name"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="fontStyle" value="regular15"/>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="colorStyle" value="black"/>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="localizedPlaceholder" value="Nom"/>
+                                    </userDefinedRuntimeAttributes>
+                                </textField>
+                            </subviews>
+                        </stackView>
                     </subviews>
                 </stackView>
             </subviews>

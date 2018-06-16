@@ -15,7 +15,8 @@ import RxCocoa
 import RxKeyboard
 
 protocol EnrollmentEmailPasswordIntents : class {
-	func loadIntent() -> Observable<Void> 
+	func loadIntent() -> Observable<Void>
+    func validationIntent() -> Observable<Bool>
     func display(viewModel : EnrollmentEmailPasswordViewModel)
 }
 
@@ -62,6 +63,30 @@ class EnrollmentEmailPasswordController : UIViewController, EnrollmentEmailPassw
     //MARK:- RxIntents
     func loadIntent() -> Observable<Void> {
     	return Observable.just(())
+    }
+    
+    func validationIntent() -> Observable<Bool> {
+        let emailObs = tfMail.rx.text.asObservable()
+            .map { text -> Bool in
+                if let text = text,
+                    text.count >= 5,
+                    text.contains("@") {
+                    return true
+                }
+                return false
+        }
+        
+        let passwordObs = tfPassword.rx.text.asObservable()
+            .map { text -> Bool in
+                if let text = text,
+                    text.count >= 5 {
+                    return true
+                }
+                return false
+        }
+        
+       return Observable.combineLatest(emailObs, passwordObs)
+            .map { ($0 && $1) }
     }
 
     //MARK:- Display

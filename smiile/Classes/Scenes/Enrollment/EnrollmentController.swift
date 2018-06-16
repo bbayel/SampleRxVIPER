@@ -27,6 +27,7 @@ class EnrollmentController : UIViewController, EnrollmentIntents {
     
     var presenter : EnrollmentModuleInterface!
     let bag = DisposeBag()
+    var buttonContinueBag = DisposeBag()
     var viewModel: EnrollmentViewModel?
     
     @IBOutlet weak var scrollViewContainer: UIScrollView!
@@ -34,7 +35,7 @@ class EnrollmentController : UIViewController, EnrollmentIntents {
     @IBOutlet weak var buttonContinue: Button!
     @IBOutlet weak var progressBar: UIProgressView!
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
-
+    
     @IBOutlet weak var containerEmailPassword: UIView!
     @IBOutlet weak var containerUserInfos: UIView!
     @IBOutlet weak var containerAddress: UIView!
@@ -42,7 +43,7 @@ class EnrollmentController : UIViewController, EnrollmentIntents {
     var emailPasswordVc: EnrollmentEmailPasswordController!
     var userInfosVc: EnrollmentUserInfosController!
     var addressVc: EnrollmentEmailPasswordController!
-
+    
     //MARK:-  View LifeCycle
     deinit {
         print("Deinit \(self)")
@@ -50,10 +51,13 @@ class EnrollmentController : UIViewController, EnrollmentIntents {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupSubcontrollers()
         presenter.attach()
         progressBar.progressTintColor = .smiileYellow
-        setupSubcontrollers()
-        
+        observeKeyboard()
+    }
+    
+    func observeKeyboard() {
         RxKeyboard.instance.visibleHeight
             .drive(onNext: { [weak self] keyboardVisibleHeight in
                 var bottomPadding:CGFloat = 0
@@ -75,10 +79,31 @@ class EnrollmentController : UIViewController, EnrollmentIntents {
         emailPasswordVc = EnrollmentEmailPasswordRouter.instantiateController()
         userInfosVc = EnrollmentUserInfosRouter.instantiateController()
         addressVc = EnrollmentEmailPasswordRouter.instantiateController()
-
+        
         addChild(emailPasswordVc, inView: containerEmailPassword, withInsets: .zero)
         addChild(userInfosVc, inView: containerUserInfos, withInsets: .zero)
         addChild(addressVc, inView: containerAddress, withInsets: .zero)
+    }
+    
+    func attachSubcontrollers() {
+        buttonContinueBag = DisposeBag()
+        
+        guard let step = viewModel?.currentStep else { return }
+        
+        switch step {
+        case .emailPassword:
+            emailPasswordVc.validationIntent()
+                .bind(to: buttonContinue.rx.isEnabled)
+                .disposed(by: buttonContinueBag)
+        case .userInfos:
+            userInfosVc.validationIntent()
+                .bind(to: buttonContinue.rx.isEnabled)
+                .disposed(by: buttonContinueBag)
+        case .address:
+            addressVc.validationIntent()
+                .bind(to: buttonContinue.rx.isEnabled)
+                .disposed(by: buttonContinueBag)
+        }
     }
     
     
@@ -112,14 +137,15 @@ class EnrollmentController : UIViewController, EnrollmentIntents {
     func display(viewModel: EnrollmentViewModel) {
         
         self.viewModel = viewModel
+        attachSubcontrollers()
         
-            switch viewModel.currentStep {
-            case .emailPassword:
-                scrollViewContainer.scrollRectToVisible(containerEmailPassword.frame, animated: true)
-            case .userInfos:
-                scrollViewContainer.scrollRectToVisible(containerUserInfos.frame, animated: true)
-            case .address:
-                scrollViewContainer.scrollRectToVisible(containerAddress.frame, animated: true)
+        switch viewModel.currentStep {
+        case .emailPassword:
+            scrollViewContainer.scrollRectToVisible(containerEmailPassword.frame, animated: true)
+        case .userInfos:
+            scrollViewContainer.scrollRectToVisible(containerUserInfos.frame, animated: true)
+        case .address:
+            scrollViewContainer.scrollRectToVisible(containerAddress.frame, animated: true)
         }
         
         view.endEditing(true)
