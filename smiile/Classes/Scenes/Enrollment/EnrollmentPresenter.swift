@@ -14,6 +14,15 @@ import RxSwift
 
 struct EnrollmentViewModel {
     
+    enum EnrollmentStep : Int {
+        case emailPassword = 0
+        case userInfos = 1
+        case address = 2
+    }
+    
+    let currentStep : EnrollmentStep
+    let progress: Float
+    let buttonContinueTitle: String
     
 }
 
@@ -50,6 +59,33 @@ class  EnrollmentPresenter : EnrollmentModuleInterface {
     func attach() {
         
         guard let viewController = viewController else { return }
+        
+        let loadObs = viewController.loadIntent()
+            .map { return EnrollmentViewModel.EnrollmentStep.emailPassword }
+        
+        let continueObs = viewController.continueIntent()
+        
+        Observable.merge([loadObs, continueObs])
+            .map { step -> EnrollmentViewModel in
+                let progress = Float(step.rawValue) / 3.0
+                var title:String!
+                switch step {
+                case .emailPassword:
+                    title = "Continuer"
+                case .userInfos:
+                    title = "Continuer"
+                case .address:
+                    title = "Finaliser mon inscription"
+                }
+                return EnrollmentViewModel(currentStep: step,
+                                           progress: progress,
+                                           buttonContinueTitle: title)
+            }
+            .subscribe(onNext: { [weak self] model in
+                self?.viewController?.display(viewModel: model)
+            })
+            .disposed(by: bag)
+        
         viewController.cancelIntent()
             .subscribe(onNext: { [weak self] in
                 self?.router.go(to: .cancel)
