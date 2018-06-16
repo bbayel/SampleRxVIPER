@@ -44,7 +44,15 @@ extension UIColor {
         return UIColor(hexString: "#4AAAD4")
     }
     
+    class var facebookBlue: UIColor {
+        return UIColor(hexString: "#405993")
+    }
+    
     class var smiileYellow: UIColor {
         return UIColor(hexString: "#F8D648")
+    }
+    
+    class var smiileOrange: UIColor {
+        return UIColor(hexString: "#EC9948")
     }
 }

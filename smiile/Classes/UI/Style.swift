@@ -44,6 +44,8 @@ enum ColorStyle:String {
     case White = "white"
     case Blue = "blue"
     case Yellow = "yellow"
+    case Orange = "orange"
+    case FBBlue = "fbBlue"
 }
 
 struct Style {
@@ -58,6 +60,11 @@ struct Style {
             return .smiileBlue
         case .Yellow:
             return .smiileYellow
+        case .Orange:
+            return .smiileOrange
+            
+        case .FBBlue:
+            return .facebookBlue
         }
     }
     

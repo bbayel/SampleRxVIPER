@@ -59,8 +59,8 @@
                                         </label>
                                     </subviews>
                                 </stackView>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="D9I-qt-XUy">
-                                    <rect key="frame" x="40" y="190" width="295" height="80"/>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="D9I-qt-XUy">
+                                    <rect key="frame" x="40" y="190" width="295" height="85"/>
                                     <subviews>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TPX-xy-vKo" customClass="TextField" customModule="smiile" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="295" height="35"/>
@@ -79,7 +79,7 @@
                                             </connections>
                                         </textField>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mot de passe" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vco-aX-sEe" customClass="TextField" customModule="smiile" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="45" width="295" height="35"/>
+                                            <rect key="frame" x="0.0" y="50" width="295" height="35"/>
                                             <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
@@ -94,10 +94,9 @@
                                     </subviews>
                                 </stackView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="61f-lc-Fxa" customClass="Button" customModule="smiile" customModuleProvider="target">
-                                    <rect key="frame" x="97.5" y="310" width="180" height="50"/>
+                                    <rect key="frame" x="40" y="315" width="295" height="50"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="50" id="Asr-q4-UAR"/>
-                                        <constraint firstAttribute="width" constant="180" id="Uyn-aX-6wT"/>
                                     </constraints>
                                     <inset key="contentEdgeInsets" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                                     <state key="normal" title="Me connecter"/>
@@ -125,15 +124,35 @@
                                         <userDefinedRuntimeAttribute type="string" keyPath="fontStyle" value="bold17"/>
                                     </userDefinedRuntimeAttributes>
                                 </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jM5-SP-Cyt" customClass="Button" customModule="smiile" customModuleProvider="target">
+                                    <rect key="frame" x="40" y="380" width="295" height="50"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="wHw-GW-01o"/>
+                                    </constraints>
+                                    <inset key="contentEdgeInsets" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+                                    <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <state key="normal" title="Continuer avec Facebook" image="fb_icon"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="fontStyle" value="bold17"/>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="colorStyle" value="fbBlue"/>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="25"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="backgroundColorStyle" value="white"/>
+                                    </userDefinedRuntimeAttributes>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstItem="zaX-lq-gh8" firstAttribute="centerX" secondItem="b7D-d2-hBx" secondAttribute="centerX" id="3JK-vF-UxF"/>
                                 <constraint firstItem="61f-lc-Fxa" firstAttribute="centerX" secondItem="b7D-d2-hBx" secondAttribute="centerX" id="3T6-G3-3OH"/>
+                                <constraint firstItem="jM5-SP-Cyt" firstAttribute="centerX" secondItem="b7D-d2-hBx" secondAttribute="centerX" id="3iv-Zh-yZ1"/>
                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="61f-lc-Fxa" secondAttribute="trailing" constant="40" id="5Gy-xf-0Bk"/>
                                 <constraint firstItem="D9I-qt-XUy" firstAttribute="top" secondItem="xme-9S-Mcf" secondAttribute="bottom" constant="40" id="7nQ-PQ-ArD"/>
+                                <constraint firstItem="jM5-SP-Cyt" firstAttribute="top" secondItem="61f-lc-Fxa" secondAttribute="bottom" constant="15" id="Bz9-pF-Kz5"/>
                                 <constraint firstAttribute="trailing" secondItem="xme-9S-Mcf" secondAttribute="trailing" constant="40" id="C38-0f-2iL"/>
                                 <constraint firstItem="D9I-qt-XUy" firstAttribute="leading" secondItem="b7D-d2-hBx" secondAttribute="leading" constant="40" id="HPv-Z2-cK3"/>
+                                <constraint firstItem="jM5-SP-Cyt" firstAttribute="width" secondItem="61f-lc-Fxa" secondAttribute="width" id="Myy-5X-g5T"/>
                                 <constraint firstItem="zaX-lq-gh8" firstAttribute="top" secondItem="b7D-d2-hBx" secondAttribute="top" constant="30" id="RRe-zK-Aoi"/>
                                 <constraint firstAttribute="trailing" secondItem="D9I-qt-XUy" secondAttribute="trailing" constant="40" id="VcC-2D-kDF"/>
                                 <constraint firstItem="61f-lc-Fxa" firstAttribute="top" secondItem="D9I-qt-XUy" secondAttribute="bottom" constant="40" id="WFP-X7-GGL"/>
@@ -141,7 +160,9 @@
                                 <constraint firstItem="61f-lc-Fxa" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="b7D-d2-hBx" secondAttribute="leading" constant="40" id="fTB-eb-XLH"/>
                                 <constraint firstItem="xme-9S-Mcf" firstAttribute="leading" secondItem="b7D-d2-hBx" secondAttribute="leading" constant="40" id="feN-5h-Q0u"/>
                                 <constraint firstItem="icw-sA-k9q" firstAttribute="leading" secondItem="b7D-d2-hBx" secondAttribute="leading" id="hs9-4a-r1z"/>
+                                <constraint firstAttribute="trailing" secondItem="jM5-SP-Cyt" secondAttribute="trailing" constant="40" id="rqB-30-YCg"/>
                                 <constraint firstItem="xme-9S-Mcf" firstAttribute="top" secondItem="zaX-lq-gh8" secondAttribute="bottom" constant="30" id="wTh-01-rfv"/>
+                                <constraint firstItem="jM5-SP-Cyt" firstAttribute="leading" secondItem="b7D-d2-hBx" secondAttribute="leading" constant="40" id="zSj-6B-yOp"/>
                                 <constraint firstAttribute="trailing" secondItem="icw-sA-k9q" secondAttribute="trailing" id="ztf-Wg-kpw"/>
                             </constraints>
                         </view>
@@ -167,9 +188,11 @@
             <userDefinedRuntimeAttributes>
                 <userDefinedRuntimeAttribute type="string" keyPath="colorStyle" value="blue"/>
             </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
         </view>
     </objects>
     <resources>
+        <image name="fb_icon" width="20" height="20"/>
         <image name="smiile_fff" width="120" height="49"/>
     </resources>
 </document>
