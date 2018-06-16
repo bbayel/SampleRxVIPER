@@ -33,7 +33,7 @@
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="f8u-QU-Pwi">
                                     <rect key="frame" x="40" y="99" width="295" height="85"/>
                                     <subviews>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h74-k0-UKj" customClass="TextField" customModule="smiile" customModuleProvider="target">
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h74-k0-UKj" customClass="TextField" customModule="smiile" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="295" height="35"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="35" id="dJh-0y-zui"/>
@@ -42,19 +42,19 @@
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next"/>
                                             <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="string" keyPath="fontStyle" value="regular18"/>
-                                                <userDefinedRuntimeAttribute type="string" keyPath="colorStyle" value="white"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="fontStyle" value="regular15"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="colorStyle" value="black"/>
                                                 <userDefinedRuntimeAttribute type="string" keyPath="localizedPlaceholder" value="Adresse e-mail"/>
                                             </userDefinedRuntimeAttributes>
                                         </textField>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mot de passe" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XO8-j5-eLt" customClass="TextField" customModule="smiile" customModuleProvider="target">
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mot de passe" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XO8-j5-eLt" customClass="TextField" customModule="smiile" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="50" width="295" height="35"/>
                                             <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
                                             <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="string" keyPath="fontStyle" value="regular18"/>
-                                                <userDefinedRuntimeAttribute type="string" keyPath="colorStyle" value="white"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="fontStyle" value="regular15"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="colorStyle" value="black"/>
                                                 <userDefinedRuntimeAttribute type="string" keyPath="localizedPlaceholder" value="Mot de passe"/>
                                             </userDefinedRuntimeAttributes>
                                         </textField>
@@ -67,9 +67,9 @@
                                     </constraints>
                                     <state key="normal" title="Valider mon inscription"/>
                                     <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="string" keyPath="backgroundColorStyle" value="white"/>
-                                        <userDefinedRuntimeAttribute type="string" keyPath="colorStyle" value="blue"/>
-                                        <userDefinedRuntimeAttribute type="string" keyPath="fontStyle" value="bold17"/>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="backgroundColorStyle" value="orange"/>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="fontStyle" value="bold15"/>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="colorStyle" value="white"/>
                                     </userDefinedRuntimeAttributes>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1yZ-Oe-Ekn" customClass="Button" customModule="smiile" customModuleProvider="target">

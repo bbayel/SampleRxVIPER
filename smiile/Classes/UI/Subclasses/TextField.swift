@@ -15,7 +15,7 @@ class TextField: UITextField {
             placeholder = NSLocalizedString(localizedPlaceholder, comment: "")
             if let font = self.font {
                 attributedPlaceholder = NSAttributedString(string: NSLocalizedString(localizedPlaceholder, comment: ""),
-                                                           attributes: [NSAttributedStringKey.foregroundColor:UIColor.white.withAlphaComponent(0.5),
+                                                           attributes: [NSAttributedStringKey.foregroundColor:UIColor.gray.withAlphaComponent(0.5),
                                                                         NSAttributedStringKey.font:font])
             }
         }

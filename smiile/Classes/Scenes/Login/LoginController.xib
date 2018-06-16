@@ -63,7 +63,7 @@
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="D9I-qt-XUy">
                                     <rect key="frame" x="40" y="190" width="295" height="85"/>
                                     <subviews>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TPX-xy-vKo" customClass="TextField" customModule="smiile" customModuleProvider="target">
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TPX-xy-vKo" customClass="TextField" customModule="smiile" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="295" height="35"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="35" id="GKL-NA-P4S"/>
@@ -72,22 +72,22 @@
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next"/>
                                             <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="string" keyPath="fontStyle" value="regular18"/>
-                                                <userDefinedRuntimeAttribute type="string" keyPath="colorStyle" value="white"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="fontStyle" value="regular15"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="colorStyle" value="black"/>
                                                 <userDefinedRuntimeAttribute type="string" keyPath="localizedPlaceholder" value="Adresse e-mail"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <outlet property="delegate" destination="-1" id="9aO-qh-Nl6"/>
                                             </connections>
                                         </textField>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mot de passe" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vco-aX-sEe" customClass="TextField" customModule="smiile" customModuleProvider="target">
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mot de passe" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vco-aX-sEe" customClass="TextField" customModule="smiile" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="50" width="295" height="35"/>
                                             <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
                                             <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="string" keyPath="fontStyle" value="regular18"/>
-                                                <userDefinedRuntimeAttribute type="string" keyPath="colorStyle" value="white"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="fontStyle" value="regular15"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="colorStyle" value="black"/>
                                                 <userDefinedRuntimeAttribute type="string" keyPath="localizedPlaceholder" value="Mot de passe"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
@@ -97,17 +97,17 @@
                                     </subviews>
                                 </stackView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="61f-lc-Fxa" customClass="Button" customModule="smiile" customModuleProvider="target">
-                                    <rect key="frame" x="40" y="315" width="295" height="50"/>
+                                    <rect key="frame" x="40" y="315" width="295" height="45"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="50" id="Asr-q4-UAR"/>
+                                        <constraint firstAttribute="height" constant="45" id="Asr-q4-UAR"/>
                                     </constraints>
                                     <inset key="contentEdgeInsets" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                                     <state key="normal" title="Me connecter"/>
                                     <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="string" keyPath="fontStyle" value="bold17"/>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="fontStyle" value="bold15"/>
                                         <userDefinedRuntimeAttribute type="string" keyPath="colorStyle" value="white"/>
                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                            <real key="value" value="25"/>
+                                            <real key="value" value="5"/>
                                         </userDefinedRuntimeAttribute>
                                         <userDefinedRuntimeAttribute type="string" keyPath="borderColorStyle" value="white"/>
                                         <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
@@ -124,22 +124,22 @@
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="string" keyPath="backgroundColorStyle" value="orange"/>
                                         <userDefinedRuntimeAttribute type="string" keyPath="colorStyle" value="white"/>
-                                        <userDefinedRuntimeAttribute type="string" keyPath="fontStyle" value="bold17"/>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="fontStyle" value="bold15"/>
                                     </userDefinedRuntimeAttributes>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jM5-SP-Cyt" customClass="Button" customModule="smiile" customModuleProvider="target">
-                                    <rect key="frame" x="40" y="380" width="295" height="50"/>
+                                    <rect key="frame" x="40" y="375" width="295" height="45"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="50" id="wHw-GW-01o"/>
+                                        <constraint firstAttribute="height" constant="45" id="wHw-GW-01o"/>
                                     </constraints>
                                     <inset key="contentEdgeInsets" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                                     <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                     <state key="normal" title="Continuer avec Facebook" image="fb_icon"/>
                                     <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="string" keyPath="fontStyle" value="bold17"/>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="fontStyle" value="bold15"/>
                                         <userDefinedRuntimeAttribute type="string" keyPath="colorStyle" value="fbBlue"/>
                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                            <real key="value" value="25"/>
+                                            <real key="value" value="5"/>
                                         </userDefinedRuntimeAttribute>
                                         <userDefinedRuntimeAttribute type="string" keyPath="backgroundColorStyle" value="white"/>
                                     </userDefinedRuntimeAttributes>
