@@ -36,7 +36,7 @@
                             <nil key="highlightedColor"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="Félicitations, votre compte est désormais créé. Vous allez recevoir un e-mail de confirmation d'ici quelques intants."/>
-                                <userDefinedRuntimeAttribute type="string" keyPath="fontStyle" value="regular22"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="fontStyle" value="regular18"/>
                                 <userDefinedRuntimeAttribute type="string" keyPath="colorStyle" value="white"/>
                             </userDefinedRuntimeAttributes>
                         </label>
