@@ -9,14 +9,14 @@
 import UIKit
 
 enum TextStyle:String {
-
+    
     
     case Bold50 = "bold50"
     case Bold22 = "bold22"
     case Bold20 = "bold20"
     case Bold17 = "bold17"
     case Bold15 = "bold15"
-
+    
     case Regular30 = "regular30"
     case Regular25 = "regular25"
     case Regular22 = "regular22"
@@ -26,7 +26,7 @@ enum TextStyle:String {
     case Regular15 = "regular15"
     case Regular14 = "regular14"
     case Regular13 = "regular13"
-
+    
     case Light28 = "light28"
     case Light25 = "light25"
     case Light20 = "light20"
@@ -42,6 +42,8 @@ enum TextStyle:String {
 enum ColorStyle:String {
     case Black = "black"
     case White = "white"
+    case Blue = "blue"
+    case Yellow = "yellow"
 }
 
 struct Style {
@@ -52,12 +54,16 @@ struct Style {
             return .black
         case .White:
             return .white
+        case .Blue:
+            return .smiileBlue
+        case .Yellow:
+            return .smiileYellow
         }
     }
     
     static func font(_ forTextStyle:TextStyle) -> UIFont {
         switch forTextStyle {
-
+            
         case .Bold50:
             return UIFont.bold(50)
         case .Bold22:
@@ -87,7 +93,7 @@ struct Style {
             return UIFont.regular(14)
         case .Regular13:
             return UIFont.regular(13)
-
+            
         case .Light28:
             return UIFont.light(28)
         case .Light25:
@@ -102,13 +108,13 @@ struct Style {
             return UIFont.light(13)
         case .Light11:
             return UIFont.light(11)
-
+            
         case .Italic30:
             return UIFont.italic(30)
         case .Italic18:
             return UIFont.italic(18)
         }
     }
-        
+    
 }
 

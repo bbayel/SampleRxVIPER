@@ -1,26 +1,175 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginController" customModule="LVPass" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginController" customModule="smiile" customModuleProvider="target">
             <connections>
+                <outlet property="bottomButtonRegister" destination="aHX-Ri-SQ9" id="Vwu-J8-Fly"/>
+                <outlet property="bottomConstraint" destination="TUn-aG-7FI" id="MPD-ZJ-y9p"/>
+                <outlet property="heightButtonRegister" destination="naP-37-aIo" id="Cth-lh-xXk"/>
+                <outlet property="tfMail" destination="TPX-xy-vKo" id="dMO-sh-LM2"/>
+                <outlet property="tfPassword" destination="vco-aX-sEe" id="cpS-cM-GEe"/>
                 <outlet property="view" destination="iN0-l3-epB" id="gEi-h7-8rz"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="View" customModule="smiile" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f6c-TG-zcM">
+                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b7D-d2-hBx" customClass="View" customModule="smiile" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                            <subviews>
+                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="smiile_fff" translatesAutoresizingMaskIntoConstraints="NO" id="zaX-lq-gh8">
+                                    <rect key="frame" x="127.5" y="30" width="120" height="49"/>
+                                </imageView>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xme-9S-Mcf">
+                                    <rect key="frame" x="40" y="109" width="295" height="41"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Partagez, économisez" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PV5-IU-CXu" customClass="Label" customModule="smiile" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="295" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="fontStyle" value="regular22"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="colorStyle" value="white"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="positivez" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xuA-7O-xqm" customClass="Label" customModule="smiile" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="20.5" width="295" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="fontStyle" value="bold22"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="colorStyle" value="yellow"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="D9I-qt-XUy">
+                                    <rect key="frame" x="40" y="190" width="295" height="80"/>
+                                    <subviews>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TPX-xy-vKo" customClass="TextField" customModule="smiile" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="295" height="35"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="35" id="GKL-NA-P4S"/>
+                                            </constraints>
+                                            <nil key="textColor"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="fontStyle" value="regular18"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="colorStyle" value="white"/>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <outlet property="delegate" destination="-1" id="9aO-qh-Nl6"/>
+                                            </connections>
+                                        </textField>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mot de passe" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vco-aX-sEe" customClass="TextField" customModule="smiile" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="45" width="295" height="35"/>
+                                            <nil key="textColor"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="fontStyle" value="regular18"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="colorStyle" value="white"/>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <outlet property="delegate" destination="-1" id="dnl-wJ-K9G"/>
+                                            </connections>
+                                        </textField>
+                                    </subviews>
+                                </stackView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="61f-lc-Fxa" customClass="Button" customModule="smiile" customModuleProvider="target">
+                                    <rect key="frame" x="97.5" y="310" width="180" height="50"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="Asr-q4-UAR"/>
+                                        <constraint firstAttribute="width" constant="180" id="Uyn-aX-6wT"/>
+                                    </constraints>
+                                    <inset key="contentEdgeInsets" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+                                    <state key="normal" title="Me connecter"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="fontStyle" value="bold17"/>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="colorStyle" value="white"/>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="25"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="borderColorStyle" value="white"/>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                            <real key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="icw-sA-k9q" customClass="Button" customModule="smiile" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="597" width="375" height="50"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="naP-37-aIo"/>
+                                    </constraints>
+                                    <state key="normal" title="Inscription"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="backgroundColorStyle" value="yellow"/>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="colorStyle" value="white"/>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="fontStyle" value="bold17"/>
+                                    </userDefinedRuntimeAttributes>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="zaX-lq-gh8" firstAttribute="centerX" secondItem="b7D-d2-hBx" secondAttribute="centerX" id="3JK-vF-UxF"/>
+                                <constraint firstItem="61f-lc-Fxa" firstAttribute="centerX" secondItem="b7D-d2-hBx" secondAttribute="centerX" id="3T6-G3-3OH"/>
+                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="61f-lc-Fxa" secondAttribute="trailing" constant="40" id="5Gy-xf-0Bk"/>
+                                <constraint firstItem="D9I-qt-XUy" firstAttribute="top" secondItem="xme-9S-Mcf" secondAttribute="bottom" constant="40" id="7nQ-PQ-ArD"/>
+                                <constraint firstAttribute="trailing" secondItem="xme-9S-Mcf" secondAttribute="trailing" constant="40" id="C38-0f-2iL"/>
+                                <constraint firstItem="D9I-qt-XUy" firstAttribute="leading" secondItem="b7D-d2-hBx" secondAttribute="leading" constant="40" id="HPv-Z2-cK3"/>
+                                <constraint firstItem="zaX-lq-gh8" firstAttribute="top" secondItem="b7D-d2-hBx" secondAttribute="top" constant="30" id="RRe-zK-Aoi"/>
+                                <constraint firstAttribute="trailing" secondItem="D9I-qt-XUy" secondAttribute="trailing" constant="40" id="VcC-2D-kDF"/>
+                                <constraint firstItem="61f-lc-Fxa" firstAttribute="top" secondItem="D9I-qt-XUy" secondAttribute="bottom" constant="40" id="WFP-X7-GGL"/>
+                                <constraint firstAttribute="bottom" secondItem="icw-sA-k9q" secondAttribute="bottom" id="aHX-Ri-SQ9"/>
+                                <constraint firstItem="61f-lc-Fxa" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="b7D-d2-hBx" secondAttribute="leading" constant="40" id="fTB-eb-XLH"/>
+                                <constraint firstItem="xme-9S-Mcf" firstAttribute="leading" secondItem="b7D-d2-hBx" secondAttribute="leading" constant="40" id="feN-5h-Q0u"/>
+                                <constraint firstItem="icw-sA-k9q" firstAttribute="leading" secondItem="b7D-d2-hBx" secondAttribute="leading" id="hs9-4a-r1z"/>
+                                <constraint firstItem="xme-9S-Mcf" firstAttribute="top" secondItem="zaX-lq-gh8" secondAttribute="bottom" constant="30" id="wTh-01-rfv"/>
+                                <constraint firstAttribute="trailing" secondItem="icw-sA-k9q" secondAttribute="trailing" id="ztf-Wg-kpw"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="b7D-d2-hBx" firstAttribute="leading" secondItem="f6c-TG-zcM" secondAttribute="leading" id="0ml-33-zTs"/>
+                        <constraint firstItem="b7D-d2-hBx" firstAttribute="width" secondItem="f6c-TG-zcM" secondAttribute="width" id="DaZ-gr-cDh"/>
+                        <constraint firstItem="b7D-d2-hBx" firstAttribute="top" secondItem="f6c-TG-zcM" secondAttribute="top" id="f0V-r9-G1H"/>
+                        <constraint firstAttribute="trailing" secondItem="b7D-d2-hBx" secondAttribute="trailing" id="hfO-i1-4Ge"/>
+                        <constraint firstAttribute="bottom" secondItem="b7D-d2-hBx" secondAttribute="bottom" id="qSi-8I-gWV"/>
+                        <constraint firstItem="b7D-d2-hBx" firstAttribute="height" secondItem="f6c-TG-zcM" secondAttribute="height" id="xji-3d-iZl"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="f6c-TG-zcM" secondAttribute="trailing" id="9Q4-zv-oZ9"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="f6c-TG-zcM" secondAttribute="bottom" id="TUn-aG-7FI"/>
+                <constraint firstItem="f6c-TG-zcM" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="dfH-gh-oMS"/>
+                <constraint firstItem="f6c-TG-zcM" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="hI8-d5-gWH"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="string" keyPath="colorStyle" value="blue"/>
+            </userDefinedRuntimeAttributes>
         </view>
     </objects>
+    <resources>
+        <image name="smiile_fff" width="120" height="49"/>
+    </resources>
 </document>
