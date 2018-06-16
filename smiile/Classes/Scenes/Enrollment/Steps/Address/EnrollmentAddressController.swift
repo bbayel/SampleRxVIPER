@@ -12,6 +12,7 @@ import Foundation
 import UIKit
 import RxSwift
 import RxCocoa
+import RxKeyboard
 
 protocol EnrollmentAddressIntents : class {
     func loadIntent() -> Observable<Void>
@@ -30,6 +31,8 @@ class EnrollmentAddressController : UIViewController, EnrollmentAddressIntents {
     let bag = DisposeBag()
     let selectionSubject = PublishSubject<String?>()
     let validateRelay = BehaviorRelay<String?>(value: nil)
+    
+    @IBOutlet weak var labelExplaination: Label!
     @IBOutlet weak var tfAddress: TextField!
     @IBOutlet weak var tableViewResults: UITableView!
     
@@ -43,6 +46,27 @@ class EnrollmentAddressController : UIViewController, EnrollmentAddressIntents {
         tableViewResults.register(AddressTableViewCell.nib(), forCellReuseIdentifier: AddressTableViewCell.reuseIdentifier())
         presenter.attach()
         observeTextfield()
+        observeKeyboard()
+    }
+    
+    func observeKeyboard() {
+        RxKeyboard.instance.visibleHeight
+            .drive(onNext: { [weak self] keyboardVisibleHeight in
+                if keyboardVisibleHeight > 0 {
+                    self?.labelExplaination.alpha = 0.0
+                    if self?.labelExplaination.isHidden == false {
+                        self?.labelExplaination.isHidden = true
+                    }
+                }
+                else {
+                    self?.labelExplaination.alpha = 1.0
+                    if self?.labelExplaination.isHidden == true {
+                        self?.labelExplaination.isHidden = false
+                    }
+                }
+                self?.view.layoutIfNeeded()
+            })
+            .disposed(by: bag)
     }
     
     func observeTextfield() {

@@ -40,6 +40,10 @@ class EnrollmentEmailPasswordController : UIViewController, EnrollmentEmailPassw
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.attach()
+        observeKeyboard()
+    }
+    
+    func observeKeyboard() {
         RxKeyboard.instance.visibleHeight
             .drive(onNext: { [weak self] keyboardVisibleHeight in
                 if keyboardVisibleHeight > 0 {
@@ -58,7 +62,6 @@ class EnrollmentEmailPasswordController : UIViewController, EnrollmentEmailPassw
             })
             .disposed(by: bag)
     }
-    
 
     //MARK:- RxIntents
     func loadIntent() -> Observable<Void> {

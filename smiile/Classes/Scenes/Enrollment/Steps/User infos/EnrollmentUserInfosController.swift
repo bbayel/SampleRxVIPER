@@ -12,6 +12,7 @@ import Foundation
 import UIKit
 import RxSwift
 import RxCocoa
+import RxKeyboard
 
 protocol EnrollmentUserInfosIntents : class {
 	func loadIntent() -> Observable<Void>
@@ -24,7 +25,9 @@ protocol EnrollmentUserInfosIntents : class {
 class EnrollmentUserInfosController : UIViewController, EnrollmentUserInfosIntents {
     
     var presenter : EnrollmentUserInfosModuleInterface!
+    let bag = DisposeBag()
     
+    @IBOutlet weak var labelExplaination: Label!
     @IBOutlet weak var tfFirstName: TextField!
     @IBOutlet weak var tfLastName: TextField!
     
@@ -36,10 +39,29 @@ class EnrollmentUserInfosController : UIViewController, EnrollmentUserInfosInten
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.attach()
-        
+        observeKeyboard()
     }
     
-
+    func observeKeyboard() {
+        RxKeyboard.instance.visibleHeight
+            .drive(onNext: { [weak self] keyboardVisibleHeight in
+                if keyboardVisibleHeight > 0 {
+                    self?.labelExplaination.alpha = 0.0
+                    if self?.labelExplaination.isHidden == false {
+                        self?.labelExplaination.isHidden = true
+                    }
+                }
+                else {
+                    self?.labelExplaination.alpha = 1.0
+                    if self?.labelExplaination.isHidden == true {
+                        self?.labelExplaination.isHidden = false
+                    }
+                }
+                self?.view.layoutIfNeeded()
+            })
+            .disposed(by: bag)
+    }
+    
     //MARK:- RxIntents
     func loadIntent() -> Observable<Void> {
     	return Observable.just(())

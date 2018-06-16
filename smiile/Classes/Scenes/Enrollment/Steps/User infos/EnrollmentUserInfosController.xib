@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EnrollmentUserInfosController" customModule="smiile" customModuleProvider="target">
             <connections>
+                <outlet property="labelExplaination" destination="QrX-jF-J0W" id="uFb-oz-Edp"/>
                 <outlet property="tfFirstName" destination="cqQ-Kj-lPu" id="WE8-OJ-Mdi"/>
                 <outlet property="tfLastName" destination="HfZ-tS-BAx" id="Eab-Gu-9cJ"/>
                 <outlet property="view" destination="iN0-l3-epB" id="gEi-h7-8rz"/>

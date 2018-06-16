@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EnrollmentAddressController" customModule="smiile" customModuleProvider="target">
             <connections>
+                <outlet property="labelExplaination" destination="nor-rk-Xod" id="Nmb-CL-4Qv"/>
                 <outlet property="tableViewResults" destination="KD5-zK-aYv" id="OPz-gB-r2U"/>
                 <outlet property="tfAddress" destination="gjy-fr-lph" id="jpB-OZ-KDw"/>
                 <outlet property="view" destination="iN0-l3-epB" id="gEi-h7-8rz"/>
