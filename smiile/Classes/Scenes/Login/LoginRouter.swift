@@ -12,7 +12,7 @@ import Foundation
 import UIKit
 
 enum LoginRoute {
-    
+    case enrollment
 }
 
 
@@ -42,9 +42,11 @@ struct LoginRouter :  LoginRouterInput {
     }
     
     func go(to route : LoginRoute) {
-//        switch route {
-//
-//        }
+        switch route {
+        case .enrollment:
+            let vc = EnrollmentRouter.instantiateController()
+            controller?.present(vc, animated: true, completion: nil)
+        }
     }
     
     

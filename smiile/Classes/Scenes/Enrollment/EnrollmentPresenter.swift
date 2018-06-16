@@ -1,5 +1,5 @@
 //
-//  LoginPresenter.swift
+//  EnrollmentPresenter.swift
 //  smiile
 //
 //  Created by Benjamin on 16/06/2018.
@@ -12,29 +12,29 @@ import RxSwift
 
 
 
-struct LoginViewModel {
+struct EnrollmentViewModel {
     
     
 }
 
-protocol LoginModuleInterface : class {
+protocol EnrollmentModuleInterface : class {
     func attach()
 }
 
 
-class  LoginPresenter : LoginModuleInterface {
+class  EnrollmentPresenter : EnrollmentModuleInterface {
     private let bag = DisposeBag()
     ///Use the scheduler for debouce, Throttle, etc. The scheduler can be set in the constructor to facilitate tests.
     private let scheduler : SchedulerType
     
-    private let router : LoginRouterInput
-    private let interactor : LoginInteractorInput
-    private weak var viewController : LoginIntents?
+    private let router : EnrollmentRouterInput
+    private let interactor : EnrollmentInteractorInput
+    private weak var viewController : EnrollmentIntents?
     
     
-    init(router : LoginRouterInput,
-         interactor : LoginInteractorInput,
-         viewController : LoginIntents,
+    init(router : EnrollmentRouterInput,
+         interactor : EnrollmentInteractorInput,
+         viewController : EnrollmentIntents,
          scheduler : SchedulerType = MainScheduler.instance ) {
         self.router = router
         self.interactor = interactor
@@ -50,10 +50,9 @@ class  LoginPresenter : LoginModuleInterface {
     func attach() {
         
         guard let viewController = viewController else { return }
-        
-        viewController.registerIntent()
+        viewController.cancelIntent()
             .subscribe(onNext: { [weak self] in
-                self?.router.go(to: .enrollment)
+                self?.router.go(to: .cancel)
             })
             .disposed(by: bag)
     }

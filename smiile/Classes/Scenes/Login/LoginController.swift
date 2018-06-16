@@ -15,7 +15,8 @@ import RxCocoa
 import RxKeyboard
 
 protocol LoginIntents : class {
-	func loadIntent() -> Observable<Void> 
+	func loadIntent() -> Observable<Void>
+    func registerIntent() -> Observable<Void>
     func display(viewModel : LoginViewModel)
 }
 
@@ -31,6 +32,9 @@ class LoginController : UIViewController, LoginIntents {
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var tfMail: TextField!
     @IBOutlet weak var tfPassword: TextField!
+    
+    @IBOutlet weak var buttonRegister: Button!
+    
     
     //MARK:-  View LifeCycle
         deinit {
@@ -67,6 +71,10 @@ class LoginController : UIViewController, LoginIntents {
     //MARK:- RxIntents
     func loadIntent() -> Observable<Void> {
     	return Observable.just(())
+    }
+    
+    func registerIntent() -> Observable<Void> {
+        return buttonRegister.rx.tap.asObservable()
     }
 
     //MARK:- Display
