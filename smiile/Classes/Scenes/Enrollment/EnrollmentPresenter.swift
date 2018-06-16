@@ -18,6 +18,7 @@ struct EnrollmentViewModel {
         case emailPassword = 0
         case userInfos = 1
         case address = 2
+        case success = 3
     }
     
     let currentStep : EnrollmentStep
@@ -67,7 +68,7 @@ class  EnrollmentPresenter : EnrollmentModuleInterface {
         let continueObs = viewController.continueIntent()
         let cancelObs = viewController.cancelIntent()
             .do(onNext: { [weak self] step in
-                if step == nil {
+                if step == nil{
                     self?.router.go(to: .cancel)
                 }
             })
@@ -89,6 +90,10 @@ class  EnrollmentPresenter : EnrollmentModuleInterface {
                 case .address:
                     title = "Finaliser mon inscription"
                     imageName = "icon_back"
+                case .success:
+                    title = "Découvrir l'application"
+                    imageName = ""
+
                 }
                 return EnrollmentViewModel(currentStep: step,
                                            progress: progress,

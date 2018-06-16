@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EnrollmentSuccessController" customModule="smiile" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="iN0-l3-epB" id="gEi-h7-8rz"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="5wU-iB-grh">
+                    <rect key="frame" x="30" y="40" width="315" height="145"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_success" translatesAutoresizingMaskIntoConstraints="NO" id="fo5-eX-d2r" customClass="ImageView" customModule="smiile" customModuleProvider="target">
+                            <rect key="frame" x="125.5" y="0.0" width="64" height="64"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="colorStyle" value="yellow"/>
+                            </userDefinedRuntimeAttributes>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aUv-jk-Tad" customClass="Label" customModule="smiile" customModuleProvider="target">
+                            <rect key="frame" x="136.5" y="84" width="42" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="Félicitations, votre compte est désormais créé. Vous allez recevoir un e-mail de confirmation d'ici quelques intants."/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="fontStyle" value="regular22"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="colorStyle" value="white"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gkg-OS-kdm" customClass="Label" customModule="smiile" customModuleProvider="target">
+                            <rect key="frame" x="136.5" y="124.5" width="42" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="Vous pouvez dès à présent parcourir l'application."/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="fontStyle" value="regular18"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="colorStyle" value="white"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="5wU-iB-grh" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="Lko-Xz-dbO"/>
+                <constraint firstItem="5wU-iB-grh" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="30" id="M8O-lt-dkY"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="5wU-iB-grh" secondAttribute="trailing" constant="30" id="cFl-oT-Y1G"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="5wU-iB-grh" secondAttribute="bottom" constant="20" id="hlP-r3-6Bf"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_success" width="64" height="64"/>
+    </resources>
+</document>

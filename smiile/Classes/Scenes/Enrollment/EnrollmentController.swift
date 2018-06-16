@@ -39,11 +39,13 @@ class EnrollmentController : UIViewController, EnrollmentIntents {
     @IBOutlet weak var containerEmailPassword: UIView!
     @IBOutlet weak var containerUserInfos: UIView!
     @IBOutlet weak var containerAddress: UIView!
+    @IBOutlet weak var containerSuccess: UIView!
     
     var emailPasswordVc: EnrollmentEmailPasswordController!
     var userInfosVc: EnrollmentUserInfosController!
     var addressVc: EnrollmentAddressController!
-    
+    var successVc: EnrollmentSuccessController!
+
     //MARK:-  View LifeCycle
     deinit {
         print("Deinit \(self)")
@@ -79,10 +81,12 @@ class EnrollmentController : UIViewController, EnrollmentIntents {
         emailPasswordVc = EnrollmentEmailPasswordRouter.instantiateController()
         userInfosVc = EnrollmentUserInfosRouter.instantiateController()
         addressVc = EnrollmentAddressRouter.instantiateController()
+        successVc = EnrollmentSuccessRouter.instantiateController()
         
         addChild(emailPasswordVc, inView: containerEmailPassword, withInsets: .zero)
         addChild(userInfosVc, inView: containerUserInfos, withInsets: .zero)
         addChild(addressVc, inView: containerAddress, withInsets: .zero)
+        addChild(successVc, inView: containerSuccess, withInsets: .zero)
     }
     
     func attachSubcontrollers() {
@@ -101,6 +105,10 @@ class EnrollmentController : UIViewController, EnrollmentIntents {
                 .disposed(by: buttonContinueBag)
         case .address:
             addressVc.validationIntent()
+                .bind(to: buttonContinue.rx.isEnabled)
+                .disposed(by: buttonContinueBag)
+        case .success:
+            successVc.validationIntent()
                 .bind(to: buttonContinue.rx.isEnabled)
                 .disposed(by: buttonContinueBag)
         }
@@ -146,6 +154,8 @@ class EnrollmentController : UIViewController, EnrollmentIntents {
             scrollViewContainer.scrollRectToVisible(containerUserInfos.frame, animated: true)
         case .address:
             scrollViewContainer.scrollRectToVisible(containerAddress.frame, animated: true)
+        case .success:
+            scrollViewContainer.scrollRectToVisible(containerSuccess.frame, animated: true)
         }
         
         view.endEditing(true)
@@ -154,7 +164,13 @@ class EnrollmentController : UIViewController, EnrollmentIntents {
             title != viewModel.buttonContinueTitle {
             buttonContinue.setTitle(viewModel.buttonContinueTitle, for: .normal)
         }
-        buttonClose.setImage(UIImage(named: viewModel.imageNameButtonCancel), for: .normal)
+        if case .success = viewModel.currentStep {
+            buttonClose.isHidden = true
+        }
+        else {
+            buttonClose.setImage(UIImage(named: viewModel.imageNameButtonCancel), for: .normal)
+            buttonClose.isHidden = false
+        }
         progressBar.setProgress(viewModel.progress, animated: true)
     }
     

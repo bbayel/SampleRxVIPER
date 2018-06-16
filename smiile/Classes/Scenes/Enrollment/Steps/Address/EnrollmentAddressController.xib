@@ -32,7 +32,7 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                             <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="Dernière étape, merci de renseignez votre adresse"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="Dernière étape, merci de renseignez votre adresse :"/>
                                 <userDefinedRuntimeAttribute type="string" keyPath="fontStyle" value="regular17"/>
                                 <userDefinedRuntimeAttribute type="string" keyPath="colorStyle" value="white"/>
                             </userDefinedRuntimeAttributes>

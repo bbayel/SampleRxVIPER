@@ -17,6 +17,7 @@
                 <outlet property="buttonContinue" destination="N7m-p9-Ih0" id="w7K-xi-RRk"/>
                 <outlet property="containerAddress" destination="XZ2-Yh-fJs" id="jPL-Un-q4I"/>
                 <outlet property="containerEmailPassword" destination="F7T-8D-mGZ" id="StH-88-tdl"/>
+                <outlet property="containerSuccess" destination="HaI-OR-GCE" id="qd4-eM-nb1"/>
                 <outlet property="containerUserInfos" destination="2ev-IO-8Ft" id="NUu-uE-5ub"/>
                 <outlet property="progressBar" destination="waR-qo-Fx5" id="gYF-ZV-yJt"/>
                 <outlet property="scrollViewContainer" destination="rvh-j9-ogr" id="J3q-ed-dTV"/>
@@ -70,7 +71,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="516"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="uV4-CL-iCj">
-                                                    <rect key="frame" x="0.0" y="0.0" width="1125" height="516"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="1500" height="516"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F7T-8D-mGZ">
                                                             <rect key="frame" x="0.0" y="0.0" width="375" height="516"/>
@@ -82,6 +83,10 @@
                                                         </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XZ2-Yh-fJs">
                                                             <rect key="frame" x="750" y="0.0" width="375" height="516"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </view>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HaI-OR-GCE">
+                                                            <rect key="frame" x="1125" y="0.0" width="375" height="516"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </view>
                                                     </subviews>

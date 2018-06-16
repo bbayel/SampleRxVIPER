@@ -53,6 +53,9 @@
                                         <userDefinedRuntimeAttribute type="string" keyPath="colorStyle" value="black"/>
                                         <userDefinedRuntimeAttribute type="string" keyPath="localizedPlaceholder" value="Prénom"/>
                                     </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <outlet property="delegate" destination="-1" id="7Pl-Up-15l"/>
+                                    </connections>
                                 </textField>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nom" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HfZ-tS-BAx" customClass="TextField" customModule="smiile" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="50" width="295" height="35"/>
@@ -64,6 +67,9 @@
                                         <userDefinedRuntimeAttribute type="string" keyPath="colorStyle" value="black"/>
                                         <userDefinedRuntimeAttribute type="string" keyPath="localizedPlaceholder" value="Nom"/>
                                     </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <outlet property="delegate" destination="-1" id="Tp6-6K-ARF"/>
+                                    </connections>
                                 </textField>
                             </subviews>
                         </stackView>

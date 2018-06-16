@@ -96,3 +96,19 @@ class EnrollmentUserInfosController : UIViewController, EnrollmentUserInfosInten
     }
     
 }
+
+extension EnrollmentUserInfosController : UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        if textField == tfFirstName {
+            _ = tfLastName.becomeFirstResponder()
+        }
+        else {
+            _ = tfLastName.resignFirstResponder()
+        }
+        
+        return false
+    }
+    
+}
