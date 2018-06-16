@@ -50,6 +50,13 @@
 		4353E23C20D5470E003441C0 /* EnrollmentUserInfosController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4353E23720D5470E003441C0 /* EnrollmentUserInfosController.swift */; };
 		4353E23D20D5470E003441C0 /* EnrollmentUserInfosInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4353E23820D5470E003441C0 /* EnrollmentUserInfosInteractor.swift */; };
 		4353E23E20D5470E003441C0 /* EnrollmentUserInfosController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4353E23920D5470E003441C0 /* EnrollmentUserInfosController.xib */; };
+		4353E24420D55C4E003441C0 /* EnrollmentAddressPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4353E23F20D55C4E003441C0 /* EnrollmentAddressPresenter.swift */; };
+		4353E24520D55C4E003441C0 /* EnrollmentAddressRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4353E24020D55C4E003441C0 /* EnrollmentAddressRouter.swift */; };
+		4353E24620D55C4E003441C0 /* EnrollmentAddressController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4353E24120D55C4E003441C0 /* EnrollmentAddressController.swift */; };
+		4353E24720D55C4E003441C0 /* EnrollmentAddressInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4353E24220D55C4E003441C0 /* EnrollmentAddressInteractor.swift */; };
+		4353E24820D55C4E003441C0 /* EnrollmentAddressController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4353E24320D55C4E003441C0 /* EnrollmentAddressController.xib */; };
+		4353E24C20D55ECC003441C0 /* AddressTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4353E24A20D55ECC003441C0 /* AddressTableViewCell.swift */; };
+		4353E24D20D55ECC003441C0 /* AddressTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4353E24B20D55ECC003441C0 /* AddressTableViewCell.xib */; };
 		86B0B5B7F1B166F228959EE9 /* Pods_smiileUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F835FF65429E164D4223CAD /* Pods_smiileUITests.framework */; };
 		975D683723004F438861807D /* Pods_smiile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99DD1918DAADDF68076510C8 /* Pods_smiile.framework */; };
 		DA393B901004C1F3DAB58079 /* Pods_smiileTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1105B2558A9DA91C12BC476F /* Pods_smiileTests.framework */; };
@@ -124,6 +131,13 @@
 		4353E23720D5470E003441C0 /* EnrollmentUserInfosController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnrollmentUserInfosController.swift; sourceTree = "<group>"; };
 		4353E23820D5470E003441C0 /* EnrollmentUserInfosInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnrollmentUserInfosInteractor.swift; sourceTree = "<group>"; };
 		4353E23920D5470E003441C0 /* EnrollmentUserInfosController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EnrollmentUserInfosController.xib; sourceTree = "<group>"; };
+		4353E23F20D55C4E003441C0 /* EnrollmentAddressPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnrollmentAddressPresenter.swift; sourceTree = "<group>"; };
+		4353E24020D55C4E003441C0 /* EnrollmentAddressRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnrollmentAddressRouter.swift; sourceTree = "<group>"; };
+		4353E24120D55C4E003441C0 /* EnrollmentAddressController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnrollmentAddressController.swift; sourceTree = "<group>"; };
+		4353E24220D55C4E003441C0 /* EnrollmentAddressInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnrollmentAddressInteractor.swift; sourceTree = "<group>"; };
+		4353E24320D55C4E003441C0 /* EnrollmentAddressController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EnrollmentAddressController.xib; sourceTree = "<group>"; };
+		4353E24A20D55ECC003441C0 /* AddressTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressTableViewCell.swift; sourceTree = "<group>"; };
+		4353E24B20D55ECC003441C0 /* AddressTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddressTableViewCell.xib; sourceTree = "<group>"; };
 		5F835FF65429E164D4223CAD /* Pods_smiileUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_smiileUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		99DD1918DAADDF68076510C8 /* Pods_smiile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_smiile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B509C3E8D0A995E9B601F95B /* Pods-smiileTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-smiileTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-smiileTests/Pods-smiileTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -363,8 +377,23 @@
 		4353E21620D53F43003441C0 /* Address */ = {
 			isa = PBXGroup;
 			children = (
+				4353E24920D55EBD003441C0 /* Cell */,
+				4353E23F20D55C4E003441C0 /* EnrollmentAddressPresenter.swift */,
+				4353E24020D55C4E003441C0 /* EnrollmentAddressRouter.swift */,
+				4353E24120D55C4E003441C0 /* EnrollmentAddressController.swift */,
+				4353E24220D55C4E003441C0 /* EnrollmentAddressInteractor.swift */,
+				4353E24320D55C4E003441C0 /* EnrollmentAddressController.xib */,
 			);
 			path = Address;
+			sourceTree = "<group>";
+		};
+		4353E24920D55EBD003441C0 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				4353E24A20D55ECC003441C0 /* AddressTableViewCell.swift */,
+				4353E24B20D55ECC003441C0 /* AddressTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		EE5E7AFD5E3431A59752EE5E /* Frameworks */ = {
@@ -487,10 +516,12 @@
 			files = (
 				4353E23E20D5470E003441C0 /* EnrollmentUserInfosController.xib in Resources */,
 				4353E18620D4F3D7003441C0 /* LaunchScreen.storyboard in Resources */,
+				4353E24D20D55ECC003441C0 /* AddressTableViewCell.xib in Resources */,
 				4353E23420D544C3003441C0 /* EnrollmentEmailPasswordController.xib in Resources */,
 				4353E20820D509B3003441C0 /* EnrollmentController.xib in Resources */,
 				4353E1E620D4F8F7003441C0 /* LoginController.xib in Resources */,
 				4353E18320D4F3D7003441C0 /* Assets.xcassets in Resources */,
+				4353E24820D55C4E003441C0 /* EnrollmentAddressController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -606,6 +637,7 @@
 				4353E1D320D4F8BE003441C0 /* CollectionReusableView.swift in Sources */,
 				4353E23320D544C3003441C0 /* EnrollmentEmailPasswordInteractor.swift in Sources */,
 				4353E23B20D5470E003441C0 /* EnrollmentUserInfosRouter.swift in Sources */,
+				4353E24420D55C4E003441C0 /* EnrollmentAddressPresenter.swift in Sources */,
 				4353E17C20D4F3D5003441C0 /* AppDelegate.swift in Sources */,
 				4353E23020D544C3003441C0 /* EnrollmentEmailPasswordPresenter.swift in Sources */,
 				4353E1FC20D4F9AD003441C0 /* UIViewControllerExtension.swift in Sources */,
@@ -616,8 +648,11 @@
 				4353E23C20D5470E003441C0 /* EnrollmentUserInfosController.swift in Sources */,
 				4353E1D620D4F8BE003441C0 /* TextField.swift in Sources */,
 				4353E1EC20D4F974003441C0 /* Style.swift in Sources */,
+				4353E24720D55C4E003441C0 /* EnrollmentAddressInteractor.swift in Sources */,
+				4353E24C20D55ECC003441C0 /* AddressTableViewCell.swift in Sources */,
 				4353E1F620D4F9AD003441C0 /* StringExtension.swift in Sources */,
 				4353E1D920D4F8BE003441C0 /* ImageView.swift in Sources */,
+				4353E24520D55C4E003441C0 /* EnrollmentAddressRouter.swift in Sources */,
 				4353E1E520D4F8F7003441C0 /* LoginInteractor.swift in Sources */,
 				4353E1EA20D4F95E003441C0 /* CollectionViewCell.swift in Sources */,
 				4353E23120D544C3003441C0 /* EnrollmentEmailPasswordRouter.swift in Sources */,
@@ -630,6 +665,7 @@
 				4353E1D220D4F8BE003441C0 /* Button.swift in Sources */,
 				4353E1E420D4F8F7003441C0 /* LoginController.swift in Sources */,
 				4353E23220D544C3003441C0 /* EnrollmentEmailPasswordController.swift in Sources */,
+				4353E24620D55C4E003441C0 /* EnrollmentAddressController.swift in Sources */,
 				4353E23A20D5470E003441C0 /* EnrollmentUserInfosPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -42,7 +42,7 @@ class EnrollmentController : UIViewController, EnrollmentIntents {
     
     var emailPasswordVc: EnrollmentEmailPasswordController!
     var userInfosVc: EnrollmentUserInfosController!
-    var addressVc: EnrollmentEmailPasswordController!
+    var addressVc: EnrollmentAddressController!
     
     //MARK:-  View LifeCycle
     deinit {
@@ -78,7 +78,7 @@ class EnrollmentController : UIViewController, EnrollmentIntents {
         
         emailPasswordVc = EnrollmentEmailPasswordRouter.instantiateController()
         userInfosVc = EnrollmentUserInfosRouter.instantiateController()
-        addressVc = EnrollmentEmailPasswordRouter.instantiateController()
+        addressVc = EnrollmentAddressRouter.instantiateController()
         
         addChild(emailPasswordVc, inView: containerEmailPassword, withInsets: .zero)
         addChild(userInfosVc, inView: containerUserInfos, withInsets: .zero)

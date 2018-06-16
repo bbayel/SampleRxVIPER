@@ -62,7 +62,7 @@ class  EnrollmentPresenter : EnrollmentModuleInterface {
         guard let viewController = viewController else { return }
         
         let loadObs = viewController.loadIntent()
-            .map { return EnrollmentViewModel.EnrollmentStep.emailPassword }
+            .map { return EnrollmentViewModel.EnrollmentStep.address }
         
         let continueObs = viewController.continueIntent()
         let cancelObs = viewController.cancelIntent()
