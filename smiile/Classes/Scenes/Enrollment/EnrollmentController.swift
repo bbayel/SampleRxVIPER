@@ -12,11 +12,12 @@ import Foundation
 import UIKit
 import RxSwift
 import RxCocoa
+import RxKeyboard
 
 protocol EnrollmentIntents : class {
     func loadIntent() -> Observable<Void>
     func continueIntent() -> Observable<EnrollmentViewModel.EnrollmentStep>
-    func cancelIntent() -> Observable<Void>
+    func cancelIntent() -> Observable<EnrollmentViewModel.EnrollmentStep?>
     func display(viewModel : EnrollmentViewModel)
 }
 
@@ -32,7 +33,8 @@ class EnrollmentController : UIViewController, EnrollmentIntents {
     @IBOutlet weak var buttonClose: Button!
     @IBOutlet weak var buttonContinue: Button!
     @IBOutlet weak var progressBar: UIProgressView!
-    
+    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
+
     @IBOutlet weak var containerEmailPassword: UIView!
     @IBOutlet weak var containerUserInfos: UIView!
     @IBOutlet weak var containerAddress: UIView!
@@ -49,10 +51,23 @@ class EnrollmentController : UIViewController, EnrollmentIntents {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.attach()
-        
         progressBar.progressTintColor = .smiileYellow
-        
         setupSubcontrollers()
+        
+        RxKeyboard.instance.visibleHeight
+            .drive(onNext: { [weak self] keyboardVisibleHeight in
+                var bottomPadding:CGFloat = 0
+                var topPadding:CGFloat = 0
+                if #available(iOS 11.0, *) {
+                    if let window = UIApplication.shared.keyWindow {
+                        bottomPadding = window.safeAreaInsets.bottom
+                        topPadding = window.safeAreaInsets.top
+                    }
+                }
+                self?.bottomConstraint.constant = max(keyboardVisibleHeight - bottomPadding - topPadding, 0)
+                self?.view.layoutIfNeeded()
+            })
+            .disposed(by: bag)
     }
     
     func setupSubcontrollers() {
@@ -72,8 +87,14 @@ class EnrollmentController : UIViewController, EnrollmentIntents {
         return Observable.just(())
     }
     
-    func cancelIntent() -> Observable<Void> {
+    func cancelIntent() -> Observable<EnrollmentViewModel.EnrollmentStep?> {
         return buttonClose.rx.tap.asObservable()
+            .map { [weak self] _ in
+                if let step = self?.viewModel?.currentStep {
+                    return EnrollmentViewModel.EnrollmentStep(rawValue: step.rawValue - 1)
+                }
+                return nil
+        }
     }
     
     func continueIntent() -> Observable<EnrollmentViewModel.EnrollmentStep> {
@@ -101,10 +122,13 @@ class EnrollmentController : UIViewController, EnrollmentIntents {
                 scrollViewContainer.scrollRectToVisible(containerAddress.frame, animated: true)
         }
         
+        view.endEditing(true)
+        
         if let title = buttonContinue.title(for: .normal),
             title != viewModel.buttonContinueTitle {
             buttonContinue.setTitle(viewModel.buttonContinueTitle, for: .normal)
         }
+        buttonClose.setImage(UIImage(named: viewModel.imageNameButtonCancel), for: .normal)
         progressBar.setProgress(viewModel.progress, animated: true)
     }
     

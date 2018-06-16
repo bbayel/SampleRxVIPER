@@ -12,6 +12,7 @@ import Foundation
 import UIKit
 import RxSwift
 import RxCocoa
+import RxKeyboard
 
 protocol EnrollmentEmailPasswordIntents : class {
 	func loadIntent() -> Observable<Void> 
@@ -24,6 +25,11 @@ class EnrollmentEmailPasswordController : UIViewController, EnrollmentEmailPassw
     
     var presenter : EnrollmentEmailPasswordModuleInterface!
     
+    @IBOutlet weak var labelExplaination: Label!
+    @IBOutlet weak var tfMail: TextField!
+    @IBOutlet weak var tfPassword: TextField!
+    
+    let bag = DisposeBag()
     
     //MARK:-  View LifeCycle
         deinit {
@@ -33,7 +39,23 @@ class EnrollmentEmailPasswordController : UIViewController, EnrollmentEmailPassw
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.attach()
-        
+        RxKeyboard.instance.visibleHeight
+            .drive(onNext: { [weak self] keyboardVisibleHeight in
+                if keyboardVisibleHeight > 0 {
+                    self?.labelExplaination.alpha = 0.0
+                    if self?.labelExplaination.isHidden == false {
+                        self?.labelExplaination.isHidden = true
+                    }
+                }
+                else {
+                    self?.labelExplaination.alpha = 1.0
+                    if self?.labelExplaination.isHidden == true {
+                        self?.labelExplaination.isHidden = false
+                    }
+                }
+                self?.view.layoutIfNeeded()
+            })
+            .disposed(by: bag)
     }
     
 
@@ -45,6 +67,22 @@ class EnrollmentEmailPasswordController : UIViewController, EnrollmentEmailPassw
     //MARK:- Display
     func display(viewModel: EnrollmentEmailPasswordViewModel) {
 
+    }
+    
+}
+
+extension EnrollmentEmailPasswordController : UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        if textField == tfMail {
+            _ = tfPassword.becomeFirstResponder()
+        }
+        else {
+            _ = tfPassword.resignFirstResponder()
+        }
+        
+        return false
     }
     
 }

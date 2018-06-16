@@ -23,6 +23,7 @@ struct EnrollmentViewModel {
     let currentStep : EnrollmentStep
     let progress: Float
     let buttonContinueTitle: String
+    let imageNameButtonCancel: String
     
 }
 
@@ -64,33 +65,41 @@ class  EnrollmentPresenter : EnrollmentModuleInterface {
             .map { return EnrollmentViewModel.EnrollmentStep.emailPassword }
         
         let continueObs = viewController.continueIntent()
-        
-        Observable.merge([loadObs, continueObs])
+        let cancelObs = viewController.cancelIntent()
+            .do(onNext: { [weak self] step in
+                if step == nil {
+                    self?.router.go(to: .cancel)
+                }
+            })
+            .filter { $0 != nil }
+            .map { $0! }
+
+        Observable.merge([loadObs, continueObs, cancelObs])
             .map { step -> EnrollmentViewModel in
                 let progress = Float(step.rawValue) / 3.0
                 var title:String!
+                var imageName:String!
                 switch step {
                 case .emailPassword:
                     title = "Continuer"
+                    imageName = "icon_close"
                 case .userInfos:
                     title = "Continuer"
+                    imageName = "icon_back"
                 case .address:
                     title = "Finaliser mon inscription"
+                    imageName = "icon_back"
                 }
                 return EnrollmentViewModel(currentStep: step,
                                            progress: progress,
-                                           buttonContinueTitle: title)
+                                           buttonContinueTitle: title,
+                                           imageNameButtonCancel: imageName)
             }
             .subscribe(onNext: { [weak self] model in
                 self?.viewController?.display(viewModel: model)
             })
             .disposed(by: bag)
         
-        viewController.cancelIntent()
-            .subscribe(onNext: { [weak self] in
-                self?.router.go(to: .cancel)
-            })
-            .disposed(by: bag)
     }
     
     
