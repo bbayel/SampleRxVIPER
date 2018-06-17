@@ -32,11 +32,12 @@ class HomeController : BaseViewController, HomeIntents {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Accueil"
         presenter.attach()
     }
     
     override func setupTabbar() {
-        tabBarItem = UITabBarItem(title: "Home",
+        tabBarItem = UITabBarItem(title: "Accueil",
                                   image: UIImage(named:"icon_home"),
                                   tag: 0)
     }    

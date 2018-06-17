@@ -40,6 +40,10 @@ extension UIColor {
         return UIColor(red: red, green: green, blue: blue, alpha: 1.0)
     }
     
+    class var background: UIColor {
+        return UIColor(hexString: "#F2F2F2")
+    }
+    
     class var smiileBlue: UIColor {
         return UIColor(hexString: "#4AAAD4")
     }

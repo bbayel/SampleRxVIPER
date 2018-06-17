@@ -16,7 +16,8 @@ enum TextStyle:String {
     case Bold20 = "bold20"
     case Bold17 = "bold17"
     case Bold15 = "bold15"
-    
+    case Bold13 = "bold13"
+
     case Regular30 = "regular30"
     case Regular25 = "regular25"
     case Regular22 = "regular22"
@@ -26,7 +27,7 @@ enum TextStyle:String {
     case Regular15 = "regular15"
     case Regular14 = "regular14"
     case Regular13 = "regular13"
-    
+
     case Light28 = "light28"
     case Light25 = "light25"
     case Light20 = "light20"
@@ -46,6 +47,7 @@ enum ColorStyle:String {
     case Yellow = "yellow"
     case Orange = "orange"
     case FBBlue = "fbBlue"
+    case Background = "background"
 }
 
 struct Style {
@@ -62,6 +64,8 @@ struct Style {
             return .smiileYellow
         case .Orange:
             return .smiileOrange
+        case .Background:
+            return .background
             
         case .FBBlue:
             return .facebookBlue
@@ -81,7 +85,9 @@ struct Style {
             return UIFont.bold(17)
         case .Bold15:
             return UIFont.bold(15)
-            
+        case .Bold13:
+            return UIFont.bold(13)
+
         case .Regular30:
             return UIFont.regular(30)
         case .Regular25:
@@ -100,7 +106,7 @@ struct Style {
             return UIFont.regular(14)
         case .Regular13:
             return UIFont.regular(13)
-            
+
         case .Light28:
             return UIFont.light(28)
         case .Light25:
