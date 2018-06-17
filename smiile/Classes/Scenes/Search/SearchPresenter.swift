@@ -51,7 +51,7 @@ class  SearchPresenter : SearchModuleInterface {
         guard let viewController = viewController else { return }
         
         viewController.searchIntent()
-            .flatMapLatest { [unonwed self] terms in
+            .flatMapLatest { [unowned self] terms in
                 return self.interactor.search(terms)
             }
             .map { result in
