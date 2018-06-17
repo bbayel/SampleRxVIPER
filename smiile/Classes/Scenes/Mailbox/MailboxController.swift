@@ -33,7 +33,7 @@ class MailboxController : UIViewController, MailboxIntents {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.attach()
-        
+        title = "Ma messagerie"
     }
     
 

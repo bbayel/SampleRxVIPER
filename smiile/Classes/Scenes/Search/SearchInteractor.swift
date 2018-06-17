@@ -12,15 +12,15 @@ import Foundation
 import RxSwift
 
 protocol  SearchInteractorInput  {
-    
+    func search(_ terms: String?) -> Observable<[SmallAd]>
 }
 
 struct SearchInteractor : SearchInteractorInput {
     
-//    var repository : Repository
-//
-//    init(repository : Repository) {
-//            self.repository = repository
-//    }
+    let repository = SearchRepository()
+    
+    func search(_ terms: String?) -> Observable<[SmallAd]> {
+        return repository.searchAd(terms)
+    }
 
 }

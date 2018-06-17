@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="SearchCollectionViewCell" customModule="smiile" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="339" height="137"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="339" height="137"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PWM-34-DmU">
+                        <rect key="frame" x="0.0" y="0.0" width="339" height="137"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C3J-5N-ocl" customClass="Label" customModule="hpsc" customModuleProvider="target">
+                                <rect key="frame" x="40" y="10" width="279" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="fontStyle" value="Bold15"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="colorStyle" value="cerulean"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IiV-7C-L19" customClass="Label" customModule="hpsc" customModuleProvider="target">
+                                <rect key="frame" x="40" y="30.5" width="279" height="96.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="fontStyle" value="Regular15"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="colorStyle" value="gunMetal"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aym-6O-3v6" customClass="View" customModule="hpsc" customModuleProvider="target">
+                                <rect key="frame" x="40" y="136" width="299" height="1"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="cxk-5H-xMV"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="colorStyle" value="background"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="aym-6O-3v6" secondAttribute="bottom" id="9pI-h4-P1q"/>
+                            <constraint firstAttribute="bottom" secondItem="IiV-7C-L19" secondAttribute="bottom" constant="10" id="GUd-Nr-1UL"/>
+                            <constraint firstAttribute="trailing" secondItem="aym-6O-3v6" secondAttribute="trailing" id="fBc-l5-D52"/>
+                            <constraint firstItem="aym-6O-3v6" firstAttribute="leading" secondItem="IiV-7C-L19" secondAttribute="leading" id="fJn-w0-JAR"/>
+                            <constraint firstAttribute="trailing" secondItem="C3J-5N-ocl" secondAttribute="trailing" constant="20" id="fOi-8q-PlT"/>
+                            <constraint firstItem="IiV-7C-L19" firstAttribute="leading" secondItem="PWM-34-DmU" secondAttribute="leading" constant="40" id="fdD-PN-6Ua"/>
+                            <constraint firstItem="C3J-5N-ocl" firstAttribute="leading" secondItem="PWM-34-DmU" secondAttribute="leading" constant="40" id="jzY-30-jwr"/>
+                            <constraint firstAttribute="trailing" secondItem="IiV-7C-L19" secondAttribute="trailing" constant="20" id="kP6-lw-Glu"/>
+                            <constraint firstItem="C3J-5N-ocl" firstAttribute="top" secondItem="PWM-34-DmU" secondAttribute="top" constant="10" id="qUC-a6-nlG"/>
+                            <constraint firstItem="IiV-7C-L19" firstAttribute="top" secondItem="C3J-5N-ocl" secondAttribute="bottom" id="wF9-oh-9Kl"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="PWM-34-DmU" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="5e1-H1-eNh"/>
+                <constraint firstAttribute="trailing" secondItem="PWM-34-DmU" secondAttribute="trailing" id="P3S-id-xOz"/>
+                <constraint firstItem="PWM-34-DmU" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="qMW-2J-5zl"/>
+                <constraint firstAttribute="bottom" secondItem="PWM-34-DmU" secondAttribute="bottom" id="rBQ-6z-7Ph"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="339" height="137"/>
+            <point key="canvasLocation" x="54.5" y="97.5"/>
+        </collectionViewCell>
+    </objects>
+</document>

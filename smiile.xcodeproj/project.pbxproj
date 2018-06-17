@@ -96,6 +96,11 @@
 		4353E2A220D6B04D003441C0 /* MailboxController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4353E29D20D6B04D003441C0 /* MailboxController.swift */; };
 		4353E2A320D6B04D003441C0 /* MailboxInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4353E29E20D6B04D003441C0 /* MailboxInteractor.swift */; };
 		4353E2A420D6B04D003441C0 /* MailboxController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4353E29F20D6B04D003441C0 /* MailboxController.xib */; };
+		4353E2A820D6B59D003441C0 /* SearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4353E2A620D6B59D003441C0 /* SearchCollectionViewCell.swift */; };
+		4353E2A920D6B59D003441C0 /* SearchCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4353E2A720D6B59D003441C0 /* SearchCollectionViewCell.xib */; };
+		4353E2AC20D6B717003441C0 /* SmallAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4353E2AB20D6B717003441C0 /* SmallAd.swift */; };
+		4353E2AF20D6B7A8003441C0 /* SearchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4353E2AE20D6B7A8003441C0 /* SearchRepository.swift */; };
+		4353E2B220D6B7DB003441C0 /* AddressRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4353E2B120D6B7DB003441C0 /* AddressRepository.swift */; };
 		86B0B5B7F1B166F228959EE9 /* Pods_smiileUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F835FF65429E164D4223CAD /* Pods_smiileUITests.framework */; };
 		975D683723004F438861807D /* Pods_smiile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99DD1918DAADDF68076510C8 /* Pods_smiile.framework */; };
 		DA393B901004C1F3DAB58079 /* Pods_smiileTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1105B2558A9DA91C12BC476F /* Pods_smiileTests.framework */; };
@@ -216,6 +221,11 @@
 		4353E29D20D6B04D003441C0 /* MailboxController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailboxController.swift; sourceTree = "<group>"; };
 		4353E29E20D6B04D003441C0 /* MailboxInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailboxInteractor.swift; sourceTree = "<group>"; };
 		4353E29F20D6B04D003441C0 /* MailboxController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MailboxController.xib; sourceTree = "<group>"; };
+		4353E2A620D6B59D003441C0 /* SearchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewCell.swift; sourceTree = "<group>"; };
+		4353E2A720D6B59D003441C0 /* SearchCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCollectionViewCell.xib; sourceTree = "<group>"; };
+		4353E2AB20D6B717003441C0 /* SmallAd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallAd.swift; sourceTree = "<group>"; };
+		4353E2AE20D6B7A8003441C0 /* SearchRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRepository.swift; sourceTree = "<group>"; };
+		4353E2B120D6B7DB003441C0 /* AddressRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressRepository.swift; sourceTree = "<group>"; };
 		5F835FF65429E164D4223CAD /* Pods_smiileUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_smiileUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		99DD1918DAADDF68076510C8 /* Pods_smiile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_smiile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B509C3E8D0A995E9B601F95B /* Pods-smiileTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-smiileTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-smiileTests/Pods-smiileTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -321,6 +331,8 @@
 			children = (
 				4353E17B20D4F3D5003441C0 /* AppDelegate.swift */,
 				4353E1FD20D4F9B4003441C0 /* Extensions */,
+				4353E2AA20D6B684003441C0 /* Models */,
+				4353E2AD20D6B798003441C0 /* Repositories */,
 				4353E1AD20D4F887003441C0 /* UI */,
 				4353E1AC20D4F883003441C0 /* Scenes */,
 			);
@@ -556,6 +568,7 @@
 		4353E28920D69B23003441C0 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				4353E2A520D6B58B003441C0 /* Cell */,
 				4353E28A20D69B30003441C0 /* SearchPresenter.swift */,
 				4353E28B20D69B30003441C0 /* SearchRouter.swift */,
 				4353E28C20D69B30003441C0 /* SearchController.swift */,
@@ -575,6 +588,32 @@
 				4353E29F20D6B04D003441C0 /* MailboxController.xib */,
 			);
 			path = Mailbox;
+			sourceTree = "<group>";
+		};
+		4353E2A520D6B58B003441C0 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				4353E2A620D6B59D003441C0 /* SearchCollectionViewCell.swift */,
+				4353E2A720D6B59D003441C0 /* SearchCollectionViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		4353E2AA20D6B684003441C0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4353E2AB20D6B717003441C0 /* SmallAd.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4353E2AD20D6B798003441C0 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				4353E2AE20D6B7A8003441C0 /* SearchRepository.swift */,
+				4353E2B120D6B7DB003441C0 /* AddressRepository.swift */,
+			);
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 		EE5E7AFD5E3431A59752EE5E /* Frameworks */ = {
@@ -709,6 +748,7 @@
 				4353E28820D69AAC003441C0 /* OthersController.xib in Resources */,
 				4353E26320D6603A003441C0 /* HomeController.xib in Resources */,
 				4353E24820D55C4E003441C0 /* EnrollmentAddressController.xib in Resources */,
+				4353E2A920D6B59D003441C0 /* SearchCollectionViewCell.xib in Resources */,
 				4353E27E20D69AA4003441C0 /* RequestController.xib in Resources */,
 				4353E29320D69B30003441C0 /* SearchController.xib in Resources */,
 			);
@@ -841,6 +881,7 @@
 				4353E23020D544C3003441C0 /* EnrollmentEmailPasswordPresenter.swift in Sources */,
 				4353E1FC20D4F9AD003441C0 /* UIViewControllerExtension.swift in Sources */,
 				4353E26620D69738003441C0 /* RootViewController.swift in Sources */,
+				4353E2AF20D6B7A8003441C0 /* SearchRepository.swift in Sources */,
 				4353E28420D69AAC003441C0 /* OthersPresenter.swift in Sources */,
 				4353E27D20D69AA4003441C0 /* RequestInteractor.swift in Sources */,
 				4353E1D720D4F8BE003441C0 /* TextView.swift in Sources */,
@@ -858,6 +899,7 @@
 				4353E1D620D4F8BE003441C0 /* TextField.swift in Sources */,
 				4353E25620D56C08003441C0 /* EnrollmentSuccessController.swift in Sources */,
 				4353E1EC20D4F974003441C0 /* Style.swift in Sources */,
+				4353E2AC20D6B717003441C0 /* SmallAd.swift in Sources */,
 				4353E24720D55C4E003441C0 /* EnrollmentAddressInteractor.swift in Sources */,
 				4353E24C20D55ECC003441C0 /* AddressTableViewCell.swift in Sources */,
 				4353E1F620D4F9AD003441C0 /* StringExtension.swift in Sources */,
@@ -870,6 +912,7 @@
 				4353E1EA20D4F95E003441C0 /* CollectionViewCell.swift in Sources */,
 				4353E27C20D69AA4003441C0 /* RequestController.swift in Sources */,
 				4353E23120D544C3003441C0 /* EnrollmentEmailPasswordRouter.swift in Sources */,
+				4353E2B220D6B7DB003441C0 /* AddressRepository.swift in Sources */,
 				4353E1DA20D4F8BE003441C0 /* Label.swift in Sources */,
 				4353E25F20D6603A003441C0 /* HomePresenter.swift in Sources */,
 				4353E28F20D69B30003441C0 /* SearchPresenter.swift in Sources */,
@@ -878,6 +921,7 @@
 				4353E20720D509B3003441C0 /* EnrollmentInteractor.swift in Sources */,
 				4353E20520D509B3003441C0 /* EnrollmentRouter.swift in Sources */,
 				4353E20420D509B3003441C0 /* EnrollmentPresenter.swift in Sources */,
+				4353E2A820D6B59D003441C0 /* SearchCollectionViewCell.swift in Sources */,
 				4353E1E320D4F8F7003441C0 /* LoginRouter.swift in Sources */,
 				4353E1D220D4F8BE003441C0 /* Button.swift in Sources */,
 				4353E29920D6AE7A003441C0 /* BadgeBarButtonItem.swift in Sources */,

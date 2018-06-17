@@ -13,8 +13,7 @@ import RxSwift
 
 
 struct SearchViewModel {
-
-    
+    let response:[SmallAd]?
 }
 
 protocol SearchModuleInterface : class {
@@ -45,11 +44,24 @@ class  SearchPresenter : SearchModuleInterface {
     deinit {
         print("Deinit \(self)")
     }
-
+    
     
     func attach() {
-
+        
         guard let viewController = viewController else { return }
+        
+        viewController.searchIntent()
+            .flatMapLatest { [unonwed self] terms in
+                return self.interactor.search(terms)
+            }
+            .map { result in
+                return SearchViewModel(response: result)
+            }
+            .subscribe(onNext: { [weak self] model in
+                self?.viewController?.display(viewModel: model)
+            })
+            .disposed(by: bag)
+        
         viewController.notificationIntent()
             .subscribe(onNext: { [weak self] in
                 self?.router.go(to: .mailbox)
@@ -57,6 +69,6 @@ class  SearchPresenter : SearchModuleInterface {
             .disposed(by: bag)
     }
     
-
+    
     
 }

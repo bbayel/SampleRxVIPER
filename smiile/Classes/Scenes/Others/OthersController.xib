@@ -154,7 +154,7 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                             <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="Je"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="Mes préférences"/>
                                                 <userDefinedRuntimeAttribute type="string" keyPath="fontStyle" value="regular15"/>
                                                 <userDefinedRuntimeAttribute type="string" keyPath="colorStyle" value="black"/>
                                             </userDefinedRuntimeAttributes>
