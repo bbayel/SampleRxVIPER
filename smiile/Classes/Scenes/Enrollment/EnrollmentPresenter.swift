@@ -66,16 +66,25 @@ class  EnrollmentPresenter : EnrollmentModuleInterface {
             .map { return EnrollmentViewModel.EnrollmentStep.emailPassword }
         
         let continueObs = viewController.continueIntent()
+            .do(onNext: { [weak self] step in
+                if step == nil{
+                    self?.router.go(to: .home)
+                }
+            })
+        
+        
         let cancelObs = viewController.cancelIntent()
             .do(onNext: { [weak self] step in
                 if step == nil{
                     self?.router.go(to: .cancel)
                 }
             })
+        
+        let navigationObs = Observable.merge([continueObs, cancelObs])
             .filter { $0 != nil }
             .map { $0! }
-
-        Observable.merge([loadObs, continueObs, cancelObs])
+        
+        Observable.merge([loadObs, navigationObs])
             .map { step -> EnrollmentViewModel in
                 let progress = Float(step.rawValue) / 3.0
                 var title:String!
@@ -93,7 +102,7 @@ class  EnrollmentPresenter : EnrollmentModuleInterface {
                 case .success:
                     title = "Découvrir l'application"
                     imageName = ""
-
+                    
                 }
                 return EnrollmentViewModel(currentStep: step,
                                            progress: progress,

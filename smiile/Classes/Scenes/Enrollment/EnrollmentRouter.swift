@@ -10,9 +10,11 @@
 
 import Foundation
 import UIKit
+import RxSwift
 
 enum EnrollmentRoute {
     case cancel
+    case home
 }
 
 
@@ -21,7 +23,7 @@ enum EnrollmentRoute {
  * Using an interface let you stub the component for Unit Testing
  */
 protocol EnrollmentRouterInput {
-    static func instantiateController() -> EnrollmentController
+    static func instantiateController() -> (EnrollmentController, PublishSubject<Void>)
     func go(to route : EnrollmentRoute)
 }
 
@@ -29,8 +31,9 @@ protocol EnrollmentRouterInput {
 struct EnrollmentRouter :  EnrollmentRouterInput {
     
     private weak var controller : EnrollmentController?
+    let enrollmentSubject = PublishSubject<Void>()
     
-    static func instantiateController() -> EnrollmentController {
+    static func instantiateController() -> (EnrollmentController, PublishSubject<Void>) {
         let controller = EnrollmentController(nibName: "EnrollmentController", bundle: nil)
         
         let interactor = EnrollmentInteractor()
@@ -38,13 +41,17 @@ struct EnrollmentRouter :  EnrollmentRouterInput {
         let presenter = EnrollmentPresenter(router: router, interactor: interactor, viewController: controller)
         controller.presenter = presenter
         
-        return controller
+        return (controller, router.enrollmentSubject)
     }
     
     func go(to route : EnrollmentRoute) {
         switch route {
         case .cancel:
             controller?.dismiss(animated: true, completion: nil)
+        case .home:
+            controller?.dismiss(animated: true, completion: {
+                self.enrollmentSubject.onNext(())
+            })
         }
     }
     

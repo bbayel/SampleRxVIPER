@@ -56,6 +56,12 @@ class  LoginPresenter : LoginModuleInterface {
                 self?.router.go(to: .enrollment)
             })
             .disposed(by: bag)
+        
+        viewController.loginIntent()
+            .subscribe(onNext: { [weak self] in
+                self?.router.go(to: .home)
+            })
+            .disposed(by: bag)
     }
     
     

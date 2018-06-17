@@ -10,9 +10,11 @@
 
 import Foundation
 import UIKit
+import RxSwift
 
 enum LoginRoute {
     case enrollment
+    case home
 }
 
 
@@ -29,7 +31,7 @@ protocol LoginRouterInput {
 struct LoginRouter :  LoginRouterInput {
     
     private weak var controller : LoginController?
-    
+    let bag = DisposeBag()
     static func instantiateController() -> LoginController {
         let controller = LoginController(nibName: "LoginController", bundle: nil)
         
@@ -44,8 +46,16 @@ struct LoginRouter :  LoginRouterInput {
     func go(to route : LoginRoute) {
         switch route {
         case .enrollment:
-            let vc = EnrollmentRouter.instantiateController()
+            let (vc, enrollmentIntent) = EnrollmentRouter.instantiateController()
             controller?.present(vc, animated: true, completion: nil)
+            enrollmentIntent.take(1)
+                .subscribe(onNext: { self.go(to: .home) })
+                .disposed(by: bag)
+            
+        case .home:
+            let vc = HomeRouter.instantiateController()
+            let navController = UINavigationController(rootViewController: vc)
+            controller?.present(navController, animated: true, completion: nil)
         }
     }
     

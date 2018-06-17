@@ -15,8 +15,9 @@ import RxCocoa
 import RxKeyboard
 
 protocol LoginIntents : class {
-	func loadIntent() -> Observable<Void>
+    func loadIntent() -> Observable<Void>
     func registerIntent() -> Observable<Void>
+    func loginIntent() -> Observable<Void>
     func display(viewModel : LoginViewModel)
 }
 
@@ -32,19 +33,24 @@ class LoginController : UIViewController, LoginIntents {
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var tfMail: TextField!
     @IBOutlet weak var tfPassword: TextField!
-    
+    @IBOutlet weak var buttonLogin: Button!
+    @IBOutlet weak var buttonFacebook: Button!
     @IBOutlet weak var buttonRegister: Button!
     
     
     //MARK:-  View LifeCycle
-        deinit {
+    deinit {
         print("Deinit \(self)")
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.attach()
-        
+        observeKeyboard()
+        observeTextfields()
+    }
+    
+    func observeKeyboard() {
         RxKeyboard.instance.visibleHeight
             .drive(onNext: { [weak self] keyboardVisibleHeight in
                 var bottomPadding:CGFloat = 0
@@ -67,19 +73,49 @@ class LoginController : UIViewController, LoginIntents {
             .disposed(by: bag)
     }
     
-
+    func observeTextfields() {
+        let emailObs = tfMail.rx.text.asObservable()
+            .map { text -> Bool in
+                if let text = text,
+                    text.count >= 5,
+                    text.contains("@") {
+                    return true
+                }
+                return false
+        }
+        
+        let passwordObs = tfPassword.rx.text.asObservable()
+            .map { text -> Bool in
+                if let text = text,
+                    text.count >= 5 {
+                    return true
+                }
+                return false
+        }
+        
+        Observable.combineLatest(emailObs, passwordObs)
+            .map { ($0 && $1) }
+            .bind(to: buttonLogin.rx.isEnabled)
+            .disposed(by: bag)
+    }
+    
     //MARK:- RxIntents
     func loadIntent() -> Observable<Void> {
-    	return Observable.just(())
+        return Observable.just(())
+    }
+    
+    func loginIntent() -> Observable<Void> {
+        return Observable.merge([buttonLogin.rx.tap.asObservable(),
+                                 buttonFacebook.rx.tap.asObservable()])
     }
     
     func registerIntent() -> Observable<Void> {
         return buttonRegister.rx.tap.asObservable()
     }
-
+    
     //MARK:- Display
     func display(viewModel: LoginViewModel) {
-
+        
     }
     
 }

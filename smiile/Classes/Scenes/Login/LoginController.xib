@@ -14,6 +14,8 @@
             <connections>
                 <outlet property="bottomButtonRegister" destination="aHX-Ri-SQ9" id="Vwu-J8-Fly"/>
                 <outlet property="bottomConstraint" destination="TUn-aG-7FI" id="MPD-ZJ-y9p"/>
+                <outlet property="buttonFacebook" destination="jM5-SP-Cyt" id="kqN-Bu-iis"/>
+                <outlet property="buttonLogin" destination="61f-lc-Fxa" id="i97-ZU-Zwl"/>
                 <outlet property="buttonRegister" destination="icw-sA-k9q" id="wTX-I1-DJG"/>
                 <outlet property="heightButtonRegister" destination="naP-37-aIo" id="Cth-lh-xXk"/>
                 <outlet property="tfMail" destination="TPX-xy-vKo" id="dMO-sh-LM2"/>
@@ -98,6 +100,7 @@
                                 </stackView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="61f-lc-Fxa" customClass="Button" customModule="smiile" customModuleProvider="target">
                                     <rect key="frame" x="30" y="335" width="315" height="45"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="45" id="Asr-q4-UAR"/>
                                     </constraints>

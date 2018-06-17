@@ -16,7 +16,7 @@ import RxKeyboard
 
 protocol EnrollmentIntents : class {
     func loadIntent() -> Observable<Void>
-    func continueIntent() -> Observable<EnrollmentViewModel.EnrollmentStep>
+    func continueIntent() -> Observable<EnrollmentViewModel.EnrollmentStep?>
     func cancelIntent() -> Observable<EnrollmentViewModel.EnrollmentStep?>
     func display(viewModel : EnrollmentViewModel)
 }
@@ -130,14 +130,13 @@ class EnrollmentController : UIViewController, EnrollmentIntents {
         }
     }
     
-    func continueIntent() -> Observable<EnrollmentViewModel.EnrollmentStep> {
+    func continueIntent() -> Observable<EnrollmentViewModel.EnrollmentStep?> {
         return buttonContinue.rx.tap.asObservable()
             .map { [weak self] _ in
-                if let step = self?.viewModel?.currentStep,
-                    let nextStep = EnrollmentViewModel.EnrollmentStep(rawValue: step.rawValue + 1) {
-                    return nextStep
+                if let step = self?.viewModel?.currentStep {
+                    return EnrollmentViewModel.EnrollmentStep(rawValue: step.rawValue + 1)
                 }
-                return EnrollmentViewModel.EnrollmentStep.address
+                return nil
         }
     }
     
