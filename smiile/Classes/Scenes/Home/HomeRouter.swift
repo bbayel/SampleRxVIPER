@@ -12,7 +12,7 @@ import Foundation
 import UIKit
 
 enum HomeRoute {
-    
+    case mailbox
 }
 
 
@@ -42,9 +42,11 @@ struct HomeRouter :  HomeRouterInput {
     }
     
     func go(to route : HomeRoute) {
-//        switch route {
-//
-//        }
+        switch route {
+        case .mailbox:
+            let vc = MailboxRouter.instantiateController()
+            controller?.navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
     

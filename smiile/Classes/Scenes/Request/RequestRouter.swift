@@ -12,7 +12,7 @@ import Foundation
 import UIKit
 
 enum RequestRoute {
-    
+    case mailbox
 }
 
 
@@ -42,9 +42,12 @@ struct RequestRouter :  RequestRouterInput {
     }
     
     func go(to route : RequestRoute) {
-//        switch route {
-//
-//        }
+        switch route {
+        case .mailbox:
+            let vc = MailboxRouter.instantiateController()
+            controller?.navigationController?.pushViewController(vc, animated: true)
+
+        }
     }
     
     

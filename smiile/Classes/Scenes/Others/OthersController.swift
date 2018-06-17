@@ -13,7 +13,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-protocol OthersIntents : class {
+protocol OthersIntents : class, NotificationIntents {
 	func loadIntent() -> Observable<Void> 
     func display(viewModel : OthersViewModel)
 }
@@ -33,6 +33,7 @@ class OthersController : BaseViewController, OthersIntents {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.attach()
+        title = "Autres"
     }
     
     override func setupTabbar() {

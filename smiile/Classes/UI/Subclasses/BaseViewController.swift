@@ -7,9 +7,23 @@
 //
 
 import UIKit
+import RxSwift
+
+protocol NotificationIntents {
+    func notificationIntent() -> Observable<Void>
+}
+
+extension NotificationIntents where Self: BaseViewController {
+    
+    func notificationIntent() -> Observable<Void> {
+        return notificationBarButton.badgeButton.rx.tap.asObservable()
+    }
+}
 
 class BaseViewController : UIViewController {
-    
+
+    let notificationBarButton = BadgeBarButtonItem(image: UIImage(named: "icon_notification")!, badgeText: nil, target: nil, action: nil)
+
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         setupTabbar()
@@ -23,9 +37,16 @@ class BaseViewController : UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         navigationController?.navigationBar.barStyle = .default
         navigationController?.navigationBar.isTranslucent = false
         navigationController?.navigationBar.barTintColor = .white
         navigationController?.navigationBar.tintColor = .smiileBlue
+        navigationController?.navigationBar.prefersLargeTitles = true
+        
+        notificationBarButton.badgeText = "5"
+        
+        navigationItem.setRightBarButton(notificationBarButton, animated: false)
     }
+
 }

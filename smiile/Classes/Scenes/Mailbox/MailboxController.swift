@@ -1,5 +1,5 @@
 //
-//  HomeController.swift
+//  MailboxController.swift
 //  smiile
 //
 //  Created by Benjamin on 17/06/2018.
@@ -13,16 +13,16 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-protocol HomeIntents : class, NotificationIntents {
+protocol MailboxIntents : class {
 	func loadIntent() -> Observable<Void> 
-    func display(viewModel : HomeViewModel)
+    func display(viewModel : MailboxViewModel)
 }
 
 
 
-class HomeController : BaseViewController, HomeIntents {
+class MailboxController : UIViewController, MailboxIntents {
     
-    var presenter : HomeModuleInterface!
+    var presenter : MailboxModuleInterface!
     
     
     //MARK:-  View LifeCycle
@@ -32,15 +32,10 @@ class HomeController : BaseViewController, HomeIntents {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Accueil"
         presenter.attach()
+        
     }
     
-    override func setupTabbar() {
-        tabBarItem = UITabBarItem(title: "Accueil",
-                                  image: UIImage(named:"icon_home"),
-                                  tag: 0)
-    }    
 
     //MARK:- RxIntents
     func loadIntent() -> Observable<Void> {
@@ -48,7 +43,7 @@ class HomeController : BaseViewController, HomeIntents {
     }
 
     //MARK:- Display
-    func display(viewModel: HomeViewModel) {
+    func display(viewModel: MailboxViewModel) {
 
     }
     

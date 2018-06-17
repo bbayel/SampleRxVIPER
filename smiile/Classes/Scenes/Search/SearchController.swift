@@ -13,7 +13,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-protocol SearchIntents : class {
+protocol SearchIntents : class, NotificationIntents {
 	func loadIntent() -> Observable<Void> 
     func display(viewModel : SearchViewModel)
 }

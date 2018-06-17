@@ -12,15 +12,13 @@ import Foundation
 import RxSwift
 
 protocol  HomeInteractorInput  {
-    
+    func fetchDatas() -> Observable<Void>
 }
 
 struct HomeInteractor : HomeInteractorInput {
     
-//    var repository : Repository
-//
-//    init(repository : Repository) {
-//            self.repository = repository
-//    }
+    func fetchDatas() -> Observable<Void> {
+        return .just(())
+    }
 
 }

@@ -13,7 +13,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-protocol RequestIntents : class {
+protocol RequestIntents : class, NotificationIntents {
 	func loadIntent() -> Observable<Void> 
     func display(viewModel : RequestViewModel)
 }

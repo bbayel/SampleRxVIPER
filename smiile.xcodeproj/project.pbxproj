@@ -90,6 +90,12 @@
 		4353E29320D69B30003441C0 /* SearchController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4353E28E20D69B30003441C0 /* SearchController.xib */; };
 		4353E29520D69CBA003441C0 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4353E29420D69CBA003441C0 /* BaseViewController.swift */; };
 		4353E29720D69D10003441C0 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4353E29620D69D10003441C0 /* RootViewController.xib */; };
+		4353E29920D6AE7A003441C0 /* BadgeBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4353E29820D6AE7A003441C0 /* BadgeBarButtonItem.swift */; };
+		4353E2A020D6B04D003441C0 /* MailboxPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4353E29B20D6B04D003441C0 /* MailboxPresenter.swift */; };
+		4353E2A120D6B04D003441C0 /* MailboxRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4353E29C20D6B04D003441C0 /* MailboxRouter.swift */; };
+		4353E2A220D6B04D003441C0 /* MailboxController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4353E29D20D6B04D003441C0 /* MailboxController.swift */; };
+		4353E2A320D6B04D003441C0 /* MailboxInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4353E29E20D6B04D003441C0 /* MailboxInteractor.swift */; };
+		4353E2A420D6B04D003441C0 /* MailboxController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4353E29F20D6B04D003441C0 /* MailboxController.xib */; };
 		86B0B5B7F1B166F228959EE9 /* Pods_smiileUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F835FF65429E164D4223CAD /* Pods_smiileUITests.framework */; };
 		975D683723004F438861807D /* Pods_smiile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99DD1918DAADDF68076510C8 /* Pods_smiile.framework */; };
 		DA393B901004C1F3DAB58079 /* Pods_smiileTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1105B2558A9DA91C12BC476F /* Pods_smiileTests.framework */; };
@@ -204,6 +210,12 @@
 		4353E28E20D69B30003441C0 /* SearchController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchController.xib; sourceTree = "<group>"; };
 		4353E29420D69CBA003441C0 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		4353E29620D69D10003441C0 /* RootViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
+		4353E29820D6AE7A003441C0 /* BadgeBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadgeBarButtonItem.swift; sourceTree = "<group>"; };
+		4353E29B20D6B04D003441C0 /* MailboxPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailboxPresenter.swift; sourceTree = "<group>"; };
+		4353E29C20D6B04D003441C0 /* MailboxRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailboxRouter.swift; sourceTree = "<group>"; };
+		4353E29D20D6B04D003441C0 /* MailboxController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailboxController.swift; sourceTree = "<group>"; };
+		4353E29E20D6B04D003441C0 /* MailboxInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailboxInteractor.swift; sourceTree = "<group>"; };
+		4353E29F20D6B04D003441C0 /* MailboxController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MailboxController.xib; sourceTree = "<group>"; };
 		5F835FF65429E164D4223CAD /* Pods_smiileUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_smiileUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		99DD1918DAADDF68076510C8 /* Pods_smiile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_smiile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B509C3E8D0A995E9B601F95B /* Pods-smiileTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-smiileTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-smiileTests/Pods-smiileTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -343,6 +355,7 @@
 				4353E26820D6990C003441C0 /* Wanted */,
 				4353E28920D69B23003441C0 /* Search */,
 				4353E27420D69A90003441C0 /* Others */,
+				4353E29A20D6B026003441C0 /* Mailbox */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -359,6 +372,7 @@
 		4353E1DC20D4F8E8003441C0 /* Subclasses */ = {
 			isa = PBXGroup;
 			children = (
+				4353E29820D6AE7A003441C0 /* BadgeBarButtonItem.swift */,
 				4353E1C820D4F8BD003441C0 /* Button.swift */,
 				4353E1C920D4F8BD003441C0 /* CollectionReusableView.swift */,
 				4353E1E920D4F95E003441C0 /* CollectionViewCell.swift */,
@@ -551,6 +565,18 @@
 			path = Search;
 			sourceTree = "<group>";
 		};
+		4353E29A20D6B026003441C0 /* Mailbox */ = {
+			isa = PBXGroup;
+			children = (
+				4353E29B20D6B04D003441C0 /* MailboxPresenter.swift */,
+				4353E29C20D6B04D003441C0 /* MailboxRouter.swift */,
+				4353E29D20D6B04D003441C0 /* MailboxController.swift */,
+				4353E29E20D6B04D003441C0 /* MailboxInteractor.swift */,
+				4353E29F20D6B04D003441C0 /* MailboxController.xib */,
+			);
+			path = Mailbox;
+			sourceTree = "<group>";
+		};
 		EE5E7AFD5E3431A59752EE5E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -675,6 +701,7 @@
 				4353E25820D56C08003441C0 /* EnrollmentSuccessController.xib in Resources */,
 				4353E24D20D55ECC003441C0 /* AddressTableViewCell.xib in Resources */,
 				4353E27220D69A0C003441C0 /* WantedController.xib in Resources */,
+				4353E2A420D6B04D003441C0 /* MailboxController.xib in Resources */,
 				4353E23420D544C3003441C0 /* EnrollmentEmailPasswordController.xib in Resources */,
 				4353E20820D509B3003441C0 /* EnrollmentController.xib in Resources */,
 				4353E1E620D4F8F7003441C0 /* LoginController.xib in Resources */,
@@ -797,6 +824,7 @@
 				4353E1FA20D4F9AD003441C0 /* UIImageExtension.swift in Sources */,
 				4353E26220D6603A003441C0 /* HomeInteractor.swift in Sources */,
 				4353E20620D509B3003441C0 /* EnrollmentController.swift in Sources */,
+				4353E2A220D6B04D003441C0 /* MailboxController.swift in Sources */,
 				4353E27B20D69AA4003441C0 /* RequestRouter.swift in Sources */,
 				4353E1FB20D4F9AD003441C0 /* NSObjectExtension.swift in Sources */,
 				4353E1D520D4F8BE003441C0 /* TableViewCell.swift in Sources */,
@@ -821,6 +849,7 @@
 				4353E29220D69B30003441C0 /* SearchInteractor.swift in Sources */,
 				4353E1D820D4F8BE003441C0 /* NibView.swift in Sources */,
 				4353E27120D69A0C003441C0 /* WantedInteractor.swift in Sources */,
+				4353E2A120D6B04D003441C0 /* MailboxRouter.swift in Sources */,
 				4353E25420D56C08003441C0 /* EnrollmentSuccessPresenter.swift in Sources */,
 				4353E23C20D5470E003441C0 /* EnrollmentUserInfosController.swift in Sources */,
 				4353E26120D6603A003441C0 /* HomeController.swift in Sources */,
@@ -834,8 +863,10 @@
 				4353E1F620D4F9AD003441C0 /* StringExtension.swift in Sources */,
 				4353E1D920D4F8BE003441C0 /* ImageView.swift in Sources */,
 				4353E24520D55C4E003441C0 /* EnrollmentAddressRouter.swift in Sources */,
+				4353E2A020D6B04D003441C0 /* MailboxPresenter.swift in Sources */,
 				4353E29120D69B30003441C0 /* SearchController.swift in Sources */,
 				4353E1E520D4F8F7003441C0 /* LoginInteractor.swift in Sources */,
+				4353E2A320D6B04D003441C0 /* MailboxInteractor.swift in Sources */,
 				4353E1EA20D4F95E003441C0 /* CollectionViewCell.swift in Sources */,
 				4353E27C20D69AA4003441C0 /* RequestController.swift in Sources */,
 				4353E23120D544C3003441C0 /* EnrollmentEmailPasswordRouter.swift in Sources */,
@@ -849,6 +880,7 @@
 				4353E20420D509B3003441C0 /* EnrollmentPresenter.swift in Sources */,
 				4353E1E320D4F8F7003441C0 /* LoginRouter.swift in Sources */,
 				4353E1D220D4F8BE003441C0 /* Button.swift in Sources */,
+				4353E29920D6AE7A003441C0 /* BadgeBarButtonItem.swift in Sources */,
 				4353E1E420D4F8F7003441C0 /* LoginController.swift in Sources */,
 				4353E25520D56C08003441C0 /* EnrollmentSuccessRouter.swift in Sources */,
 				4353E26F20D69A0C003441C0 /* WantedRouter.swift in Sources */,

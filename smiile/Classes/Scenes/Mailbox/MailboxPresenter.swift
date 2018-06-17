@@ -1,5 +1,5 @@
 //
-//  SearchPresenter.swift
+//  MailboxPresenter.swift
 //  smiile
 //
 //  Created by Benjamin on 17/06/2018.
@@ -12,29 +12,29 @@ import RxSwift
 
 
 
-struct SearchViewModel {
+struct MailboxViewModel {
 
     
 }
 
-protocol SearchModuleInterface : class {
+protocol MailboxModuleInterface : class {
     func attach()
 }
 
 
-class  SearchPresenter : SearchModuleInterface {
+class  MailboxPresenter : MailboxModuleInterface {
     private let bag = DisposeBag()
     ///Use the scheduler for debouce, Throttle, etc. The scheduler can be set in the constructor to facilitate tests.
     private let scheduler : SchedulerType
     
-    private let router : SearchRouterInput
-    private let interactor : SearchInteractorInput
-    private weak var viewController : SearchIntents?
+    private let router : MailboxRouterInput
+    private let interactor : MailboxInteractorInput
+    private weak var viewController : MailboxIntents?
     
     
-    init(router : SearchRouterInput,
-         interactor : SearchInteractorInput,
-         viewController : SearchIntents,
+    init(router : MailboxRouterInput,
+         interactor : MailboxInteractorInput,
+         viewController : MailboxIntents,
          scheduler : SchedulerType = MainScheduler.instance ) {
         self.router = router
         self.interactor = interactor
@@ -50,11 +50,7 @@ class  SearchPresenter : SearchModuleInterface {
     func attach() {
 
         guard let viewController = viewController else { return }
-        viewController.notificationIntent()
-            .subscribe(onNext: { [weak self] in
-                self?.router.go(to: .mailbox)
-            })
-            .disposed(by: bag)
+        
     }
     
 

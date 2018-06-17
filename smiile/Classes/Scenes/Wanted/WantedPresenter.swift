@@ -50,7 +50,11 @@ class  WantedPresenter : WantedModuleInterface {
     func attach() {
 
         guard let viewController = viewController else { return }
-        
+        viewController.notificationIntent()
+            .subscribe(onNext: { [weak self] in
+                self?.router.go(to: .mailbox)
+            })
+            .disposed(by: bag)
     }
     
 
