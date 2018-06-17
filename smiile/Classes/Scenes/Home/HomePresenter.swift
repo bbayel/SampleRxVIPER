@@ -68,6 +68,12 @@ class  HomePresenter : HomeModuleInterface {
                 self?.router.go(to: .mailbox)
             })
             .disposed(by: bag)
+        
+        viewController.requestHelpIntent()
+            .subscribe(onNext: { [weak self] in
+                self?.router.go(to: .requestHelp)
+            })
+            .disposed(by: bag)
     }
     
     

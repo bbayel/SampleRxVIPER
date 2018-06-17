@@ -106,6 +106,12 @@
 		4353E2BA20D6C178003441C0 /* AdCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4353E2B820D6C178003441C0 /* AdCollectionViewCell.swift */; };
 		4353E2BB20D6C178003441C0 /* AdCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4353E2B920D6C178003441C0 /* AdCollectionViewCell.xib */; };
 		4353E2BD20D6C1EF003441C0 /* AdRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4353E2BC20D6C1EF003441C0 /* AdRepository.swift */; };
+		4353E2BF20D6CA21003441C0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4353E2BE20D6CA21003441C0 /* MapKit.framework */; };
+		4353E2C620D6F574003441C0 /* RequestHelpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4353E2C120D6F574003441C0 /* RequestHelpPresenter.swift */; };
+		4353E2C720D6F574003441C0 /* RequestHelpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4353E2C220D6F574003441C0 /* RequestHelpRouter.swift */; };
+		4353E2C820D6F574003441C0 /* RequestHelpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4353E2C320D6F574003441C0 /* RequestHelpController.swift */; };
+		4353E2C920D6F574003441C0 /* RequestHelpInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4353E2C420D6F574003441C0 /* RequestHelpInteractor.swift */; };
+		4353E2CA20D6F574003441C0 /* RequestHelpController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4353E2C520D6F574003441C0 /* RequestHelpController.xib */; };
 		86B0B5B7F1B166F228959EE9 /* Pods_smiileUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F835FF65429E164D4223CAD /* Pods_smiileUITests.framework */; };
 		975D683723004F438861807D /* Pods_smiile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99DD1918DAADDF68076510C8 /* Pods_smiile.framework */; };
 		DA393B901004C1F3DAB58079 /* Pods_smiileTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1105B2558A9DA91C12BC476F /* Pods_smiileTests.framework */; };
@@ -236,6 +242,12 @@
 		4353E2B820D6C178003441C0 /* AdCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdCollectionViewCell.swift; sourceTree = "<group>"; };
 		4353E2B920D6C178003441C0 /* AdCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdCollectionViewCell.xib; sourceTree = "<group>"; };
 		4353E2BC20D6C1EF003441C0 /* AdRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdRepository.swift; sourceTree = "<group>"; };
+		4353E2BE20D6CA21003441C0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		4353E2C120D6F574003441C0 /* RequestHelpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestHelpPresenter.swift; sourceTree = "<group>"; };
+		4353E2C220D6F574003441C0 /* RequestHelpRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestHelpRouter.swift; sourceTree = "<group>"; };
+		4353E2C320D6F574003441C0 /* RequestHelpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestHelpController.swift; sourceTree = "<group>"; };
+		4353E2C420D6F574003441C0 /* RequestHelpInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestHelpInteractor.swift; sourceTree = "<group>"; };
+		4353E2C520D6F574003441C0 /* RequestHelpController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RequestHelpController.xib; sourceTree = "<group>"; };
 		5F835FF65429E164D4223CAD /* Pods_smiileUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_smiileUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		99DD1918DAADDF68076510C8 /* Pods_smiile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_smiile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B509C3E8D0A995E9B601F95B /* Pods-smiileTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-smiileTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-smiileTests/Pods-smiileTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -250,6 +262,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4353E2BF20D6CA21003441C0 /* MapKit.framework in Frameworks */,
 				975D683723004F438861807D /* Pods_smiile.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -373,7 +386,8 @@
 				4353E1FE20D50992003441C0 /* Enrollment */,
 				4353E26420D69716003441C0 /* Tab Bar */,
 				4353E25920D66032003441C0 /* Home */,
-				4353E27320D69A88003441C0 /* Request */,
+				4353E27320D69A88003441C0 /* Requests */,
+				4353E2C020D6F54C003441C0 /* Request Help */,
 				4353E26820D6990C003441C0 /* Ads */,
 				4353E28920D69B23003441C0 /* Search */,
 				4353E27420D69A90003441C0 /* Others */,
@@ -552,7 +566,7 @@
 			path = Ads;
 			sourceTree = "<group>";
 		};
-		4353E27320D69A88003441C0 /* Request */ = {
+		4353E27320D69A88003441C0 /* Requests */ = {
 			isa = PBXGroup;
 			children = (
 				4353E27520D69AA4003441C0 /* RequestPresenter.swift */,
@@ -561,7 +575,7 @@
 				4353E27820D69AA4003441C0 /* RequestInteractor.swift */,
 				4353E27920D69AA4003441C0 /* RequestController.xib */,
 			);
-			path = Request;
+			path = Requests;
 			sourceTree = "<group>";
 		};
 		4353E27420D69A90003441C0 /* Others */ = {
@@ -639,9 +653,22 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		4353E2C020D6F54C003441C0 /* Request Help */ = {
+			isa = PBXGroup;
+			children = (
+				4353E2C120D6F574003441C0 /* RequestHelpPresenter.swift */,
+				4353E2C220D6F574003441C0 /* RequestHelpRouter.swift */,
+				4353E2C320D6F574003441C0 /* RequestHelpController.swift */,
+				4353E2C420D6F574003441C0 /* RequestHelpInteractor.swift */,
+				4353E2C520D6F574003441C0 /* RequestHelpController.xib */,
+			);
+			path = "Request Help";
+			sourceTree = "<group>";
+		};
 		EE5E7AFD5E3431A59752EE5E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4353E2BE20D6CA21003441C0 /* MapKit.framework */,
 				99DD1918DAADDF68076510C8 /* Pods_smiile.framework */,
 				1105B2558A9DA91C12BC476F /* Pods_smiileTests.framework */,
 				5F835FF65429E164D4223CAD /* Pods_smiileUITests.framework */,
@@ -721,6 +748,11 @@
 				TargetAttributes = {
 					4353E17720D4F3D5003441C0 = {
 						CreatedOnToolsVersion = 9.4;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					4353E18B20D4F3D7003441C0 = {
 						CreatedOnToolsVersion = 9.4;
@@ -761,6 +793,7 @@
 				4353E18620D4F3D7003441C0 /* LaunchScreen.storyboard in Resources */,
 				4353E29720D69D10003441C0 /* RootViewController.xib in Resources */,
 				4353E25820D56C08003441C0 /* EnrollmentSuccessController.xib in Resources */,
+				4353E2CA20D6F574003441C0 /* RequestHelpController.xib in Resources */,
 				4353E24D20D55ECC003441C0 /* AddressTableViewCell.xib in Resources */,
 				4353E27220D69A0C003441C0 /* WantedController.xib in Resources */,
 				4353E2A420D6B04D003441C0 /* MailboxController.xib in Resources */,
@@ -886,6 +919,7 @@
 				4353E1E220D4F8F7003441C0 /* LoginPresenter.swift in Sources */,
 				4353E29020D69B30003441C0 /* SearchRouter.swift in Sources */,
 				4353E1F820D4F9AD003441C0 /* UIFontExtension.swift in Sources */,
+				4353E2C720D6F574003441C0 /* RequestHelpRouter.swift in Sources */,
 				4353E1FA20D4F9AD003441C0 /* UIImageExtension.swift in Sources */,
 				4353E26220D6603A003441C0 /* HomeInteractor.swift in Sources */,
 				4353E20620D509B3003441C0 /* EnrollmentController.swift in Sources */,
@@ -914,10 +948,12 @@
 				4353E1F920D4F9AD003441C0 /* UIView+extensions.swift in Sources */,
 				4353E1F720D4F9AD003441C0 /* UIColorExtension.swift in Sources */,
 				4353E29220D69B30003441C0 /* SearchInteractor.swift in Sources */,
+				4353E2C820D6F574003441C0 /* RequestHelpController.swift in Sources */,
 				4353E1D820D4F8BE003441C0 /* NibView.swift in Sources */,
 				4353E27120D69A0C003441C0 /* WantedInteractor.swift in Sources */,
 				4353E2A120D6B04D003441C0 /* MailboxRouter.swift in Sources */,
 				4353E25420D56C08003441C0 /* EnrollmentSuccessPresenter.swift in Sources */,
+				4353E2C620D6F574003441C0 /* RequestHelpPresenter.swift in Sources */,
 				4353E23C20D5470E003441C0 /* EnrollmentUserInfosController.swift in Sources */,
 				4353E26120D6603A003441C0 /* HomeController.swift in Sources */,
 				4353E29520D69CBA003441C0 /* BaseViewController.swift in Sources */,
@@ -945,6 +981,7 @@
 				4353E28F20D69B30003441C0 /* SearchPresenter.swift in Sources */,
 				4353E1DB20D4F8BE003441C0 /* View.swift in Sources */,
 				4353E27020D69A0C003441C0 /* WantedController.swift in Sources */,
+				4353E2C920D6F574003441C0 /* RequestHelpInteractor.swift in Sources */,
 				4353E20720D509B3003441C0 /* EnrollmentInteractor.swift in Sources */,
 				4353E20520D509B3003441C0 /* EnrollmentRouter.swift in Sources */,
 				4353E20420D509B3003441C0 /* EnrollmentPresenter.swift in Sources */,
@@ -1127,6 +1164,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = TD9U4EEQ2R;
 				INFOPLIST_FILE = "$(SRCROOT)/smiile/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1149,6 +1187,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = TD9U4EEQ2R;
 				INFOPLIST_FILE = "$(SRCROOT)/smiile/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

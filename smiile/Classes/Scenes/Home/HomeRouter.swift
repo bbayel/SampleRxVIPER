@@ -13,6 +13,7 @@ import UIKit
 
 enum HomeRoute {
     case mailbox
+    case requestHelp
 }
 
 
@@ -45,6 +46,10 @@ struct HomeRouter :  HomeRouterInput {
         switch route {
         case .mailbox:
             let vc = MailboxRouter.instantiateController()
+            controller?.navigationController?.pushViewController(vc, animated: true)
+            
+        case .requestHelp:
+            let vc = RequestHelpRouter.instantiateController()
             controller?.navigationController?.pushViewController(vc, animated: true)
         }
     }

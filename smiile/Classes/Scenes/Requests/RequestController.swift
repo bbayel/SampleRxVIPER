@@ -14,7 +14,8 @@ import RxSwift
 import RxCocoa
 
 protocol RequestIntents : class, NotificationIntents {
-	func loadIntent() -> Observable<Void> 
+	func loadIntent() -> Observable<Void>
+    func requestHelpIntent() -> Observable<Void>
     func display(viewModel : RequestViewModel)
 }
 
@@ -23,7 +24,7 @@ protocol RequestIntents : class, NotificationIntents {
 class RequestController : BaseViewController, RequestIntents {
     
     var presenter : RequestModuleInterface!
-    
+    @IBOutlet weak var buttonRequestHelp: Button!
     
     //MARK:-  View LifeCycle
         deinit {
@@ -45,6 +46,10 @@ class RequestController : BaseViewController, RequestIntents {
     //MARK:- RxIntents
     func loadIntent() -> Observable<Void> {
     	return Observable.just(())
+    }
+    
+    func requestHelpIntent() -> Observable<Void> {
+        return buttonRequestHelp.rx.tap.asObservable()
     }
 
     //MARK:- Display

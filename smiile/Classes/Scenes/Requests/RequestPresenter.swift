@@ -13,7 +13,7 @@ import RxSwift
 
 
 struct RequestViewModel {
-
+    
     
 }
 
@@ -45,14 +45,24 @@ class  RequestPresenter : RequestModuleInterface {
     deinit {
         print("Deinit \(self)")
     }
-
+    
     
     func attach() {
-
-        guard let viewController = viewController else { return }
         
+        guard let viewController = viewController else { return }
+        viewController.notificationIntent()
+            .subscribe(onNext: { [weak self] in
+                self?.router.go(to: .mailbox)
+            })
+            .disposed(by: bag)
+        
+        viewController.requestHelpIntent()
+            .subscribe(onNext: { [weak self] in
+                self?.router.go(to: .requestHelp)
+            })
+            .disposed(by: bag)
     }
     
-
+    
     
 }
