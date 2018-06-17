@@ -33,11 +33,13 @@ class HomeController : BaseViewController, HomeIntents {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.attach()
+    }
+    
+    override func setupTabbar() {
         tabBarItem = UITabBarItem(title: "Home",
                                   image: UIImage(named:"icon_home"),
                                   tag: 0)
-    }
-    
+    }    
 
     //MARK:- RxIntents
     func loadIntent() -> Observable<Void> {

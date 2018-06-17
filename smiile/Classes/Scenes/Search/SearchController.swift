@@ -33,12 +33,13 @@ class SearchController : BaseViewController, SearchIntents {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.attach()
-        tabBarItem = UITabBarItem(title: "Recherche",
-                                  image: UIImage(named:"icon_search"),
-                                  tag: 0)
-
     }
     
+    override func setupTabbar() {
+        tabBarItem = UITabBarItem(title: "Recherche",
+                                  image: UIImage(named:"icon_search"),
+                                  tag: 3)
+    }
 
     //MARK:- RxIntents
     func loadIntent() -> Observable<Void> {

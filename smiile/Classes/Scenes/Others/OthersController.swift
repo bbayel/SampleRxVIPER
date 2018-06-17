@@ -33,10 +33,12 @@ class OthersController : BaseViewController, OthersIntents {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.attach()
+    }
+    
+    override func setupTabbar() {
         tabBarItem = UITabBarItem(title: "Autres",
                                   image: UIImage(named:"icon_others"),
-                                  tag: 0)
-
+                                  tag: 4)
     }
     
 

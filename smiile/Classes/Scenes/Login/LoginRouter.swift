@@ -58,7 +58,7 @@ struct LoginRouter :  LoginRouterInput {
             let wantedNavController = UINavigationController(rootViewController: WantedRouter.instantiateController())
             let searchNavController = UINavigationController(rootViewController: SearchRouter.instantiateController())
             let othersNavController = UINavigationController(rootViewController: OthersRouter.instantiateController())
-            let rootController = RootViewController()
+            let rootController = RootViewController(nibName: "RootViewController", bundle: nil)
             rootController.viewControllers = [homeNavController, requestNavController, wantedNavController, searchNavController, othersNavController]
             controller?.present(rootController, animated: true, completion: nil)
         }

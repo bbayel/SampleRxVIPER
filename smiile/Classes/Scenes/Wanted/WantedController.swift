@@ -33,12 +33,13 @@ class WantedController : BaseViewController, WantedIntents {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.attach()
+    }
+    
+    override func setupTabbar() {
         tabBarItem = UITabBarItem(title: "Annonces",
                                   image: UIImage(named:"icon_wanted"),
                                   tag: 2)
-
     }
-    
 
     //MARK:- RxIntents
     func loadIntent() -> Observable<Void> {

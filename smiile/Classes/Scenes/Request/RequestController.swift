@@ -33,11 +33,13 @@ class RequestController : BaseViewController, RequestIntents {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.attach()
+    }
+
+    override func setupTabbar() {
         tabBarItem = UITabBarItem(title: "Demandes",
                                   image: UIImage(named:"icon_request"),
                                   tag: 1)
     }
-    
 
     //MARK:- RxIntents
     func loadIntent() -> Observable<Void> {
