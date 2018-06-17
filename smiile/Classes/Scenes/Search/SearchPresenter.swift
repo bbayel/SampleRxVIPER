@@ -51,13 +51,13 @@ class  SearchPresenter : SearchModuleInterface {
         guard let viewController = viewController else { return }
         
         viewController.searchIntent()
-            .flatMapLatest { [unonwed self] terms in
+            .flatMapLatest { [unonwed self] terms in
                 return self.interactor.search(terms)
             }
             .map { result in
                 return SearchViewModel(response: result)
             }
-            .subscribe(onNext: { [weak self] model in
+            .subscribe(onNext: { [weak self] model in
                 self?.viewController?.display(viewModel: model)
             })
             .disposed(by: bag)
