@@ -49,7 +49,7 @@ class  MailboxPresenter : MailboxModuleInterface {
     
     func attach() {
 
-        guard let viewController = viewController else { return }
+//        guard let viewController = viewController else { return }
         
     }
     
