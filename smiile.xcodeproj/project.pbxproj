@@ -67,6 +67,28 @@
 		4353E26120D6603A003441C0 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4353E25C20D6603A003441C0 /* HomeController.swift */; };
 		4353E26220D6603A003441C0 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4353E25D20D6603A003441C0 /* HomeInteractor.swift */; };
 		4353E26320D6603A003441C0 /* HomeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4353E25E20D6603A003441C0 /* HomeController.xib */; };
+		4353E26620D69738003441C0 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4353E26520D69738003441C0 /* RootViewController.swift */; };
+		4353E26E20D69A0C003441C0 /* WantedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4353E26920D69A0C003441C0 /* WantedPresenter.swift */; };
+		4353E26F20D69A0C003441C0 /* WantedRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4353E26A20D69A0C003441C0 /* WantedRouter.swift */; };
+		4353E27020D69A0C003441C0 /* WantedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4353E26B20D69A0C003441C0 /* WantedController.swift */; };
+		4353E27120D69A0C003441C0 /* WantedInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4353E26C20D69A0C003441C0 /* WantedInteractor.swift */; };
+		4353E27220D69A0C003441C0 /* WantedController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4353E26D20D69A0C003441C0 /* WantedController.xib */; };
+		4353E27A20D69AA4003441C0 /* RequestPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4353E27520D69AA4003441C0 /* RequestPresenter.swift */; };
+		4353E27B20D69AA4003441C0 /* RequestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4353E27620D69AA4003441C0 /* RequestRouter.swift */; };
+		4353E27C20D69AA4003441C0 /* RequestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4353E27720D69AA4003441C0 /* RequestController.swift */; };
+		4353E27D20D69AA4003441C0 /* RequestInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4353E27820D69AA4003441C0 /* RequestInteractor.swift */; };
+		4353E27E20D69AA4003441C0 /* RequestController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4353E27920D69AA4003441C0 /* RequestController.xib */; };
+		4353E28420D69AAC003441C0 /* OthersPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4353E27F20D69AAC003441C0 /* OthersPresenter.swift */; };
+		4353E28520D69AAC003441C0 /* OthersRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4353E28020D69AAC003441C0 /* OthersRouter.swift */; };
+		4353E28620D69AAC003441C0 /* OthersController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4353E28120D69AAC003441C0 /* OthersController.swift */; };
+		4353E28720D69AAC003441C0 /* OthersInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4353E28220D69AAC003441C0 /* OthersInteractor.swift */; };
+		4353E28820D69AAC003441C0 /* OthersController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4353E28320D69AAC003441C0 /* OthersController.xib */; };
+		4353E28F20D69B30003441C0 /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4353E28A20D69B30003441C0 /* SearchPresenter.swift */; };
+		4353E29020D69B30003441C0 /* SearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4353E28B20D69B30003441C0 /* SearchRouter.swift */; };
+		4353E29120D69B30003441C0 /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4353E28C20D69B30003441C0 /* SearchController.swift */; };
+		4353E29220D69B30003441C0 /* SearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4353E28D20D69B30003441C0 /* SearchInteractor.swift */; };
+		4353E29320D69B30003441C0 /* SearchController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4353E28E20D69B30003441C0 /* SearchController.xib */; };
+		4353E29520D69CBA003441C0 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4353E29420D69CBA003441C0 /* BaseViewController.swift */; };
 		86B0B5B7F1B166F228959EE9 /* Pods_smiileUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F835FF65429E164D4223CAD /* Pods_smiileUITests.framework */; };
 		975D683723004F438861807D /* Pods_smiile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99DD1918DAADDF68076510C8 /* Pods_smiile.framework */; };
 		DA393B901004C1F3DAB58079 /* Pods_smiileTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1105B2558A9DA91C12BC476F /* Pods_smiileTests.framework */; };
@@ -158,6 +180,28 @@
 		4353E25C20D6603A003441C0 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		4353E25D20D6603A003441C0 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		4353E25E20D6603A003441C0 /* HomeController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeController.xib; sourceTree = "<group>"; };
+		4353E26520D69738003441C0 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		4353E26920D69A0C003441C0 /* WantedPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WantedPresenter.swift; sourceTree = "<group>"; };
+		4353E26A20D69A0C003441C0 /* WantedRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WantedRouter.swift; sourceTree = "<group>"; };
+		4353E26B20D69A0C003441C0 /* WantedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WantedController.swift; sourceTree = "<group>"; };
+		4353E26C20D69A0C003441C0 /* WantedInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WantedInteractor.swift; sourceTree = "<group>"; };
+		4353E26D20D69A0C003441C0 /* WantedController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WantedController.xib; sourceTree = "<group>"; };
+		4353E27520D69AA4003441C0 /* RequestPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestPresenter.swift; sourceTree = "<group>"; };
+		4353E27620D69AA4003441C0 /* RequestRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestRouter.swift; sourceTree = "<group>"; };
+		4353E27720D69AA4003441C0 /* RequestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestController.swift; sourceTree = "<group>"; };
+		4353E27820D69AA4003441C0 /* RequestInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestInteractor.swift; sourceTree = "<group>"; };
+		4353E27920D69AA4003441C0 /* RequestController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RequestController.xib; sourceTree = "<group>"; };
+		4353E27F20D69AAC003441C0 /* OthersPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OthersPresenter.swift; sourceTree = "<group>"; };
+		4353E28020D69AAC003441C0 /* OthersRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OthersRouter.swift; sourceTree = "<group>"; };
+		4353E28120D69AAC003441C0 /* OthersController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OthersController.swift; sourceTree = "<group>"; };
+		4353E28220D69AAC003441C0 /* OthersInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OthersInteractor.swift; sourceTree = "<group>"; };
+		4353E28320D69AAC003441C0 /* OthersController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OthersController.xib; sourceTree = "<group>"; };
+		4353E28A20D69B30003441C0 /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
+		4353E28B20D69B30003441C0 /* SearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRouter.swift; sourceTree = "<group>"; };
+		4353E28C20D69B30003441C0 /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
+		4353E28D20D69B30003441C0 /* SearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInteractor.swift; sourceTree = "<group>"; };
+		4353E28E20D69B30003441C0 /* SearchController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchController.xib; sourceTree = "<group>"; };
+		4353E29420D69CBA003441C0 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		5F835FF65429E164D4223CAD /* Pods_smiileUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_smiileUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		99DD1918DAADDF68076510C8 /* Pods_smiile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_smiile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B509C3E8D0A995E9B601F95B /* Pods-smiileTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-smiileTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-smiileTests/Pods-smiileTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -291,7 +335,12 @@
 			children = (
 				4353E1E720D4F8FB003441C0 /* Login */,
 				4353E1FE20D50992003441C0 /* Enrollment */,
+				4353E26420D69716003441C0 /* Tab Bar */,
 				4353E25920D66032003441C0 /* Home */,
+				4353E27320D69A88003441C0 /* Request */,
+				4353E26820D6990C003441C0 /* Wanted */,
+				4353E28920D69B23003441C0 /* Search */,
+				4353E27420D69A90003441C0 /* Others */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -318,6 +367,7 @@
 				4353E1CC20D4F8BE003441C0 /* TextField.swift */,
 				4353E1CD20D4F8BE003441C0 /* TextView.swift */,
 				4353E1D120D4F8BE003441C0 /* View.swift */,
+				4353E29420D69CBA003441C0 /* BaseViewController.swift */,
 			);
 			path = Subclasses;
 			sourceTree = "<group>";
@@ -442,6 +492,62 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		4353E26420D69716003441C0 /* Tab Bar */ = {
+			isa = PBXGroup;
+			children = (
+				4353E26520D69738003441C0 /* RootViewController.swift */,
+			);
+			path = "Tab Bar";
+			sourceTree = "<group>";
+		};
+		4353E26820D6990C003441C0 /* Wanted */ = {
+			isa = PBXGroup;
+			children = (
+				4353E26920D69A0C003441C0 /* WantedPresenter.swift */,
+				4353E26A20D69A0C003441C0 /* WantedRouter.swift */,
+				4353E26B20D69A0C003441C0 /* WantedController.swift */,
+				4353E26C20D69A0C003441C0 /* WantedInteractor.swift */,
+				4353E26D20D69A0C003441C0 /* WantedController.xib */,
+			);
+			path = Wanted;
+			sourceTree = "<group>";
+		};
+		4353E27320D69A88003441C0 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				4353E27520D69AA4003441C0 /* RequestPresenter.swift */,
+				4353E27620D69AA4003441C0 /* RequestRouter.swift */,
+				4353E27720D69AA4003441C0 /* RequestController.swift */,
+				4353E27820D69AA4003441C0 /* RequestInteractor.swift */,
+				4353E27920D69AA4003441C0 /* RequestController.xib */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		4353E27420D69A90003441C0 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				4353E27F20D69AAC003441C0 /* OthersPresenter.swift */,
+				4353E28020D69AAC003441C0 /* OthersRouter.swift */,
+				4353E28120D69AAC003441C0 /* OthersController.swift */,
+				4353E28220D69AAC003441C0 /* OthersInteractor.swift */,
+				4353E28320D69AAC003441C0 /* OthersController.xib */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		4353E28920D69B23003441C0 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				4353E28A20D69B30003441C0 /* SearchPresenter.swift */,
+				4353E28B20D69B30003441C0 /* SearchRouter.swift */,
+				4353E28C20D69B30003441C0 /* SearchController.swift */,
+				4353E28D20D69B30003441C0 /* SearchInteractor.swift */,
+				4353E28E20D69B30003441C0 /* SearchController.xib */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
 		EE5E7AFD5E3431A59752EE5E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -564,12 +670,16 @@
 				4353E18620D4F3D7003441C0 /* LaunchScreen.storyboard in Resources */,
 				4353E25820D56C08003441C0 /* EnrollmentSuccessController.xib in Resources */,
 				4353E24D20D55ECC003441C0 /* AddressTableViewCell.xib in Resources */,
+				4353E27220D69A0C003441C0 /* WantedController.xib in Resources */,
 				4353E23420D544C3003441C0 /* EnrollmentEmailPasswordController.xib in Resources */,
 				4353E20820D509B3003441C0 /* EnrollmentController.xib in Resources */,
 				4353E1E620D4F8F7003441C0 /* LoginController.xib in Resources */,
 				4353E18320D4F3D7003441C0 /* Assets.xcassets in Resources */,
+				4353E28820D69AAC003441C0 /* OthersController.xib in Resources */,
 				4353E26320D6603A003441C0 /* HomeController.xib in Resources */,
 				4353E24820D55C4E003441C0 /* EnrollmentAddressController.xib in Resources */,
+				4353E27E20D69AA4003441C0 /* RequestController.xib in Resources */,
+				4353E29320D69B30003441C0 /* SearchController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -675,30 +785,43 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4353E28520D69AAC003441C0 /* OthersRouter.swift in Sources */,
+				4353E27A20D69AA4003441C0 /* RequestPresenter.swift in Sources */,
 				4353E1E220D4F8F7003441C0 /* LoginPresenter.swift in Sources */,
+				4353E29020D69B30003441C0 /* SearchRouter.swift in Sources */,
 				4353E1F820D4F9AD003441C0 /* UIFontExtension.swift in Sources */,
 				4353E1FA20D4F9AD003441C0 /* UIImageExtension.swift in Sources */,
 				4353E26220D6603A003441C0 /* HomeInteractor.swift in Sources */,
 				4353E20620D509B3003441C0 /* EnrollmentController.swift in Sources */,
+				4353E27B20D69AA4003441C0 /* RequestRouter.swift in Sources */,
 				4353E1FB20D4F9AD003441C0 /* NSObjectExtension.swift in Sources */,
 				4353E1D520D4F8BE003441C0 /* TableViewCell.swift in Sources */,
 				4353E23D20D5470E003441C0 /* EnrollmentUserInfosInteractor.swift in Sources */,
 				4353E1D320D4F8BE003441C0 /* CollectionReusableView.swift in Sources */,
+				4353E26E20D69A0C003441C0 /* WantedPresenter.swift in Sources */,
 				4353E23320D544C3003441C0 /* EnrollmentEmailPasswordInteractor.swift in Sources */,
 				4353E23B20D5470E003441C0 /* EnrollmentUserInfosRouter.swift in Sources */,
 				4353E24420D55C4E003441C0 /* EnrollmentAddressPresenter.swift in Sources */,
 				4353E26020D6603A003441C0 /* HomeRouter.swift in Sources */,
 				4353E17C20D4F3D5003441C0 /* AppDelegate.swift in Sources */,
+				4353E28620D69AAC003441C0 /* OthersController.swift in Sources */,
 				4353E25720D56C08003441C0 /* EnrollmentSuccessInteractor.swift in Sources */,
 				4353E23020D544C3003441C0 /* EnrollmentEmailPasswordPresenter.swift in Sources */,
 				4353E1FC20D4F9AD003441C0 /* UIViewControllerExtension.swift in Sources */,
+				4353E26620D69738003441C0 /* RootViewController.swift in Sources */,
+				4353E28420D69AAC003441C0 /* OthersPresenter.swift in Sources */,
+				4353E27D20D69AA4003441C0 /* RequestInteractor.swift in Sources */,
 				4353E1D720D4F8BE003441C0 /* TextView.swift in Sources */,
 				4353E1F920D4F9AD003441C0 /* UIView+extensions.swift in Sources */,
 				4353E1F720D4F9AD003441C0 /* UIColorExtension.swift in Sources */,
+				4353E29220D69B30003441C0 /* SearchInteractor.swift in Sources */,
 				4353E1D820D4F8BE003441C0 /* NibView.swift in Sources */,
+				4353E27120D69A0C003441C0 /* WantedInteractor.swift in Sources */,
 				4353E25420D56C08003441C0 /* EnrollmentSuccessPresenter.swift in Sources */,
 				4353E23C20D5470E003441C0 /* EnrollmentUserInfosController.swift in Sources */,
 				4353E26120D6603A003441C0 /* HomeController.swift in Sources */,
+				4353E29520D69CBA003441C0 /* BaseViewController.swift in Sources */,
+				4353E28720D69AAC003441C0 /* OthersInteractor.swift in Sources */,
 				4353E1D620D4F8BE003441C0 /* TextField.swift in Sources */,
 				4353E25620D56C08003441C0 /* EnrollmentSuccessController.swift in Sources */,
 				4353E1EC20D4F974003441C0 /* Style.swift in Sources */,
@@ -707,12 +830,16 @@
 				4353E1F620D4F9AD003441C0 /* StringExtension.swift in Sources */,
 				4353E1D920D4F8BE003441C0 /* ImageView.swift in Sources */,
 				4353E24520D55C4E003441C0 /* EnrollmentAddressRouter.swift in Sources */,
+				4353E29120D69B30003441C0 /* SearchController.swift in Sources */,
 				4353E1E520D4F8F7003441C0 /* LoginInteractor.swift in Sources */,
 				4353E1EA20D4F95E003441C0 /* CollectionViewCell.swift in Sources */,
+				4353E27C20D69AA4003441C0 /* RequestController.swift in Sources */,
 				4353E23120D544C3003441C0 /* EnrollmentEmailPasswordRouter.swift in Sources */,
 				4353E1DA20D4F8BE003441C0 /* Label.swift in Sources */,
 				4353E25F20D6603A003441C0 /* HomePresenter.swift in Sources */,
+				4353E28F20D69B30003441C0 /* SearchPresenter.swift in Sources */,
 				4353E1DB20D4F8BE003441C0 /* View.swift in Sources */,
+				4353E27020D69A0C003441C0 /* WantedController.swift in Sources */,
 				4353E20720D509B3003441C0 /* EnrollmentInteractor.swift in Sources */,
 				4353E20520D509B3003441C0 /* EnrollmentRouter.swift in Sources */,
 				4353E20420D509B3003441C0 /* EnrollmentPresenter.swift in Sources */,
@@ -720,6 +847,7 @@
 				4353E1D220D4F8BE003441C0 /* Button.swift in Sources */,
 				4353E1E420D4F8F7003441C0 /* LoginController.swift in Sources */,
 				4353E25520D56C08003441C0 /* EnrollmentSuccessRouter.swift in Sources */,
+				4353E26F20D69A0C003441C0 /* WantedRouter.swift in Sources */,
 				4353E23220D544C3003441C0 /* EnrollmentEmailPasswordController.swift in Sources */,
 				4353E24620D55C4E003441C0 /* EnrollmentAddressController.swift in Sources */,
 				4353E23A20D5470E003441C0 /* EnrollmentUserInfosPresenter.swift in Sources */,

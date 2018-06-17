@@ -53,9 +53,14 @@ struct LoginRouter :  LoginRouterInput {
                 .disposed(by: bag)
             
         case .home:
-            let vc = HomeRouter.instantiateController()
-            let navController = UINavigationController(rootViewController: vc)
-            controller?.present(navController, animated: true, completion: nil)
+            let homeNavController = UINavigationController(rootViewController: HomeRouter.instantiateController())
+            let requestNavController = UINavigationController(rootViewController: RequestRouter.instantiateController())
+            let wantedNavController = UINavigationController(rootViewController: WantedRouter.instantiateController())
+            let searchNavController = UINavigationController(rootViewController: SearchRouter.instantiateController())
+            let othersNavController = UINavigationController(rootViewController: OthersRouter.instantiateController())
+            let rootController = RootViewController()
+            rootController.viewControllers = [homeNavController, requestNavController, wantedNavController, searchNavController, othersNavController]
+            controller?.present(rootController, animated: true, completion: nil)
         }
     }
     

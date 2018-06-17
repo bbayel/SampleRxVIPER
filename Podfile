@@ -2,25 +2,25 @@
 # platform :ios, '9.0'
 
 target 'smiile' do
-  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
-  use_frameworks!
-  inhibit_all_warnings!
-
-  # Pods for smiile
-
-pod 'RxSwift'
-pod 'RxCocoa'
-pod 'RxKeyboard'
-pod 'RxGesture'
-
-  target 'smiileTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  target 'smiileUITests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
+    # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+    use_frameworks!
+    inhibit_all_warnings!
+    
+    # Pods for smiile
+    
+    pod 'RxSwift'
+    pod 'RxCocoa'
+    pod 'RxKeyboard'
+    pod 'RxGesture'
+    
+    target 'smiileTests' do
+        inherit! :search_paths
+        # Pods for testing
+    end
+    
+    target 'smiileUITests' do
+        inherit! :search_paths
+        # Pods for testing
+    end
+    
 end

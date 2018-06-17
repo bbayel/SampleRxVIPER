@@ -1,5 +1,5 @@
 //
-//  HomeController.swift
+//  RequestController.swift
 //  smiile
 //
 //  Created by Benjamin on 17/06/2018.
@@ -13,16 +13,16 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-protocol HomeIntents : class {
+protocol RequestIntents : class {
 	func loadIntent() -> Observable<Void> 
-    func display(viewModel : HomeViewModel)
+    func display(viewModel : RequestViewModel)
 }
 
 
 
-class HomeController : BaseViewController, HomeIntents {
+class RequestController : BaseViewController, RequestIntents {
     
-    var presenter : HomeModuleInterface!
+    var presenter : RequestModuleInterface!
     
     
     //MARK:-  View LifeCycle
@@ -33,9 +33,9 @@ class HomeController : BaseViewController, HomeIntents {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.attach()
-        tabBarItem = UITabBarItem(title: "Home",
-                                  image: UIImage(named:"icon_home"),
-                                  tag: 0)
+        tabBarItem = UITabBarItem(title: "Demandes",
+                                  image: UIImage(named:"icon_request"),
+                                  tag: 1)
     }
     
 
@@ -45,7 +45,7 @@ class HomeController : BaseViewController, HomeIntents {
     }
 
     //MARK:- Display
-    func display(viewModel: HomeViewModel) {
+    func display(viewModel: RequestViewModel) {
 
     }
     

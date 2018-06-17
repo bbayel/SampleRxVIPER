@@ -1,5 +1,5 @@
 //
-//  HomeController.swift
+//  SearchController.swift
 //  smiile
 //
 //  Created by Benjamin on 17/06/2018.
@@ -13,16 +13,16 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-protocol HomeIntents : class {
+protocol SearchIntents : class {
 	func loadIntent() -> Observable<Void> 
-    func display(viewModel : HomeViewModel)
+    func display(viewModel : SearchViewModel)
 }
 
 
 
-class HomeController : BaseViewController, HomeIntents {
+class SearchController : BaseViewController, SearchIntents {
     
-    var presenter : HomeModuleInterface!
+    var presenter : SearchModuleInterface!
     
     
     //MARK:-  View LifeCycle
@@ -33,9 +33,10 @@ class HomeController : BaseViewController, HomeIntents {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.attach()
-        tabBarItem = UITabBarItem(title: "Home",
-                                  image: UIImage(named:"icon_home"),
+        tabBarItem = UITabBarItem(title: "Recherche",
+                                  image: UIImage(named:"icon_search"),
                                   tag: 0)
+
     }
     
 
@@ -45,7 +46,7 @@ class HomeController : BaseViewController, HomeIntents {
     }
 
     //MARK:- Display
-    func display(viewModel: HomeViewModel) {
+    func display(viewModel: SearchViewModel) {
 
     }
     
