@@ -23,13 +23,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="339" height="137"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="KRN-HV-eei">
-                                <rect key="frame" x="40" y="10" width="279" height="61.5"/>
+                                <rect key="frame" x="20" y="10" width="299" height="61.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="CxO-a4-nfD">
-                                        <rect key="frame" x="0.0" y="0.0" width="279" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="299" height="20.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="248" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C3J-5N-ocl" customClass="Label" customModule="hpsc" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="138.5" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="148.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -39,7 +39,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y94-xZ-ZhG" customClass="Label" customModule="hpsc" customModuleProvider="target">
-                                                <rect key="frame" x="143.5" y="0.0" width="135.5" height="20.5"/>
+                                                <rect key="frame" x="153.5" y="0.0" width="145.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -51,7 +51,7 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IiV-7C-L19" customClass="Label" customModule="hpsc" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="20.5" width="279" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="20.5" width="299" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -61,7 +61,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bd7-K6-uMu" customClass="Label" customModule="hpsc" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="41" width="279" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="41" width="299" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -73,7 +73,7 @@
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aym-6O-3v6" customClass="View" customModule="hpsc" customModuleProvider="target">
-                                <rect key="frame" x="40" y="136" width="299" height="1"/>
+                                <rect key="frame" x="20" y="136" width="319" height="1"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="cxk-5H-xMV"/>
@@ -91,7 +91,7 @@
                             <constraint firstAttribute="trailing" secondItem="aym-6O-3v6" secondAttribute="trailing" id="fBc-l5-D52"/>
                             <constraint firstItem="KRN-HV-eei" firstAttribute="top" secondItem="PWM-34-DmU" secondAttribute="top" constant="10" id="gmJ-A8-yA9"/>
                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="KRN-HV-eei" secondAttribute="bottom" constant="10" id="ubR-Ad-Nrj"/>
-                            <constraint firstItem="KRN-HV-eei" firstAttribute="leading" secondItem="PWM-34-DmU" secondAttribute="leading" constant="40" id="xcu-BO-L87"/>
+                            <constraint firstItem="KRN-HV-eei" firstAttribute="leading" secondItem="PWM-34-DmU" secondAttribute="leading" constant="20" id="xcu-BO-L87"/>
                         </constraints>
                     </view>
                 </subviews>

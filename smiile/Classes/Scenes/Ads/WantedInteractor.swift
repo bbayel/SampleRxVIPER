@@ -12,15 +12,15 @@ import Foundation
 import RxSwift
 
 protocol  WantedInteractorInput  {
-    
+    func smallAds() -> Observable<[SmallAd]>
 }
 
 struct WantedInteractor : WantedInteractorInput {
     
-//    var repository : Repository
-//
-//    init(repository : Repository) {
-//            self.repository = repository
-//    }
+    let repository = AdRepository()
+    
+    func smallAds() -> Observable<[SmallAd]> {
+        return repository.ads()
+    }
 
 }

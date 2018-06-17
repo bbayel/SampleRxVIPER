@@ -1,5 +1,5 @@
 //
-//  SearchCollectionViewCell.swift
+//  AdCollectionViewCell.swift
 //  smiile
 //
 //  Created by Benjamin on 17/06/2018.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SearchCollectionViewCell: CollectionViewCell {
+class AdCollectionViewCell: CollectionViewCell {
 
     @IBOutlet weak var labelTitle: Label!
     @IBOutlet weak var labelPrice: Label!
@@ -19,7 +19,7 @@ class SearchCollectionViewCell: CollectionViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
     func setup(_ ad: SmallAd) {
         if let price = ad.price {
             labelPrice.text = "\(price) €"
@@ -36,4 +36,5 @@ class SearchCollectionViewCell: CollectionViewCell {
         labelAuthor.text = ad.author
         labelDistance.text = "environ à \(ad.distance)"
     }
+
 }

@@ -13,8 +13,8 @@ import RxSwift
 
 
 struct WantedViewModel {
-
     
+    let smallAds: [SmallAd]?
 }
 
 protocol WantedModuleInterface : class {
@@ -45,11 +45,24 @@ class  WantedPresenter : WantedModuleInterface {
     deinit {
         print("Deinit \(self)")
     }
-
+    
     
     func attach() {
-
+        
         guard let viewController = viewController else { return }
+        
+        viewController.loadIntent()
+            .flatMapLatest { [unowned self] in
+                return self.interactor.smallAds()
+            }
+            .map { ads in
+                return WantedViewModel(smallAds: ads)
+            }
+            .subscribe(onNext: { [weak self] model in
+                self?.viewController?.display(viewModel: model)
+            })
+            .disposed(by: bag)
+        
         viewController.notificationIntent()
             .subscribe(onNext: { [weak self] in
                 self?.router.go(to: .mailbox)
@@ -57,6 +70,6 @@ class  WantedPresenter : WantedModuleInterface {
             .disposed(by: bag)
     }
     
-
+    
     
 }

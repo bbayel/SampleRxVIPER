@@ -16,17 +16,17 @@ class SearchRepository {
             terms.count > 0 {
             var ads = [SmallAd]()
             ads.append(SmallAd(type: .help,
-                               title: "Monter un meuble IKEA",
+                               title: "Besoin d'aide pour monter un meuble",
                                author: "Jean-Michel B.",
                                price: nil,
                                distance: "4km"))
             ads.append(SmallAd(type: .object,
-                               title: "Perceuse à percution",
+                               title: "Besoin d'une perceuse à percution",
                                author: "Martin B.",
                                price: nil,
                                distance: "1km"))
             ads.append(SmallAd(type: .help,
-                               title: "Co-voiturage Disneyland",
+                               title: "Cherche co-voiturage pour Disneyland",
                                author: "Sylvie A.",
                                price: 5.0,
                                distance: "7km"))

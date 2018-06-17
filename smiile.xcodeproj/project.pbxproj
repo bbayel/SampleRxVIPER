@@ -101,6 +101,11 @@
 		4353E2AC20D6B717003441C0 /* SmallAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4353E2AB20D6B717003441C0 /* SmallAd.swift */; };
 		4353E2AF20D6B7A8003441C0 /* SearchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4353E2AE20D6B7A8003441C0 /* SearchRepository.swift */; };
 		4353E2B220D6B7DB003441C0 /* AddressRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4353E2B120D6B7DB003441C0 /* AddressRepository.swift */; };
+		4353E2B520D6C08F003441C0 /* HeaderWantedCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4353E2B320D6C08F003441C0 /* HeaderWantedCollectionReusableView.swift */; };
+		4353E2B620D6C08F003441C0 /* HeaderWantedCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4353E2B420D6C08F003441C0 /* HeaderWantedCollectionReusableView.xib */; };
+		4353E2BA20D6C178003441C0 /* AdCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4353E2B820D6C178003441C0 /* AdCollectionViewCell.swift */; };
+		4353E2BB20D6C178003441C0 /* AdCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4353E2B920D6C178003441C0 /* AdCollectionViewCell.xib */; };
+		4353E2BD20D6C1EF003441C0 /* AdRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4353E2BC20D6C1EF003441C0 /* AdRepository.swift */; };
 		86B0B5B7F1B166F228959EE9 /* Pods_smiileUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F835FF65429E164D4223CAD /* Pods_smiileUITests.framework */; };
 		975D683723004F438861807D /* Pods_smiile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99DD1918DAADDF68076510C8 /* Pods_smiile.framework */; };
 		DA393B901004C1F3DAB58079 /* Pods_smiileTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1105B2558A9DA91C12BC476F /* Pods_smiileTests.framework */; };
@@ -226,6 +231,11 @@
 		4353E2AB20D6B717003441C0 /* SmallAd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallAd.swift; sourceTree = "<group>"; };
 		4353E2AE20D6B7A8003441C0 /* SearchRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRepository.swift; sourceTree = "<group>"; };
 		4353E2B120D6B7DB003441C0 /* AddressRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressRepository.swift; sourceTree = "<group>"; };
+		4353E2B320D6C08F003441C0 /* HeaderWantedCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderWantedCollectionReusableView.swift; sourceTree = "<group>"; };
+		4353E2B420D6C08F003441C0 /* HeaderWantedCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderWantedCollectionReusableView.xib; sourceTree = "<group>"; };
+		4353E2B820D6C178003441C0 /* AdCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdCollectionViewCell.swift; sourceTree = "<group>"; };
+		4353E2B920D6C178003441C0 /* AdCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdCollectionViewCell.xib; sourceTree = "<group>"; };
+		4353E2BC20D6C1EF003441C0 /* AdRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdRepository.swift; sourceTree = "<group>"; };
 		5F835FF65429E164D4223CAD /* Pods_smiileUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_smiileUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		99DD1918DAADDF68076510C8 /* Pods_smiile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_smiile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B509C3E8D0A995E9B601F95B /* Pods-smiileTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-smiileTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-smiileTests/Pods-smiileTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -364,7 +374,7 @@
 				4353E26420D69716003441C0 /* Tab Bar */,
 				4353E25920D66032003441C0 /* Home */,
 				4353E27320D69A88003441C0 /* Request */,
-				4353E26820D6990C003441C0 /* Wanted */,
+				4353E26820D6990C003441C0 /* Ads */,
 				4353E28920D69B23003441C0 /* Search */,
 				4353E27420D69A90003441C0 /* Others */,
 				4353E29A20D6B026003441C0 /* Mailbox */,
@@ -529,16 +539,17 @@
 			path = "Tab Bar";
 			sourceTree = "<group>";
 		};
-		4353E26820D6990C003441C0 /* Wanted */ = {
+		4353E26820D6990C003441C0 /* Ads */ = {
 			isa = PBXGroup;
 			children = (
+				4353E2B720D6C095003441C0 /* Cells */,
 				4353E26920D69A0C003441C0 /* WantedPresenter.swift */,
 				4353E26A20D69A0C003441C0 /* WantedRouter.swift */,
 				4353E26B20D69A0C003441C0 /* WantedController.swift */,
 				4353E26C20D69A0C003441C0 /* WantedInteractor.swift */,
 				4353E26D20D69A0C003441C0 /* WantedController.xib */,
 			);
-			path = Wanted;
+			path = Ads;
 			sourceTree = "<group>";
 		};
 		4353E27320D69A88003441C0 /* Request */ = {
@@ -612,8 +623,20 @@
 			children = (
 				4353E2AE20D6B7A8003441C0 /* SearchRepository.swift */,
 				4353E2B120D6B7DB003441C0 /* AddressRepository.swift */,
+				4353E2BC20D6C1EF003441C0 /* AdRepository.swift */,
 			);
 			path = Repositories;
+			sourceTree = "<group>";
+		};
+		4353E2B720D6C095003441C0 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				4353E2B320D6C08F003441C0 /* HeaderWantedCollectionReusableView.swift */,
+				4353E2B420D6C08F003441C0 /* HeaderWantedCollectionReusableView.xib */,
+				4353E2B820D6C178003441C0 /* AdCollectionViewCell.swift */,
+				4353E2B920D6C178003441C0 /* AdCollectionViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		EE5E7AFD5E3431A59752EE5E /* Frameworks */ = {
@@ -743,8 +766,10 @@
 				4353E2A420D6B04D003441C0 /* MailboxController.xib in Resources */,
 				4353E23420D544C3003441C0 /* EnrollmentEmailPasswordController.xib in Resources */,
 				4353E20820D509B3003441C0 /* EnrollmentController.xib in Resources */,
+				4353E2BB20D6C178003441C0 /* AdCollectionViewCell.xib in Resources */,
 				4353E1E620D4F8F7003441C0 /* LoginController.xib in Resources */,
 				4353E18320D4F3D7003441C0 /* Assets.xcassets in Resources */,
+				4353E2B620D6C08F003441C0 /* HeaderWantedCollectionReusableView.xib in Resources */,
 				4353E28820D69AAC003441C0 /* OthersController.xib in Resources */,
 				4353E26320D6603A003441C0 /* HomeController.xib in Resources */,
 				4353E24820D55C4E003441C0 /* EnrollmentAddressController.xib in Resources */,
@@ -869,6 +894,7 @@
 				4353E1FB20D4F9AD003441C0 /* NSObjectExtension.swift in Sources */,
 				4353E1D520D4F8BE003441C0 /* TableViewCell.swift in Sources */,
 				4353E23D20D5470E003441C0 /* EnrollmentUserInfosInteractor.swift in Sources */,
+				4353E2B520D6C08F003441C0 /* HeaderWantedCollectionReusableView.swift in Sources */,
 				4353E1D320D4F8BE003441C0 /* CollectionReusableView.swift in Sources */,
 				4353E26E20D69A0C003441C0 /* WantedPresenter.swift in Sources */,
 				4353E23320D544C3003441C0 /* EnrollmentEmailPasswordInteractor.swift in Sources */,
@@ -902,6 +928,7 @@
 				4353E2AC20D6B717003441C0 /* SmallAd.swift in Sources */,
 				4353E24720D55C4E003441C0 /* EnrollmentAddressInteractor.swift in Sources */,
 				4353E24C20D55ECC003441C0 /* AddressTableViewCell.swift in Sources */,
+				4353E2BA20D6C178003441C0 /* AdCollectionViewCell.swift in Sources */,
 				4353E1F620D4F9AD003441C0 /* StringExtension.swift in Sources */,
 				4353E1D920D4F8BE003441C0 /* ImageView.swift in Sources */,
 				4353E24520D55C4E003441C0 /* EnrollmentAddressRouter.swift in Sources */,
@@ -922,6 +949,7 @@
 				4353E20520D509B3003441C0 /* EnrollmentRouter.swift in Sources */,
 				4353E20420D509B3003441C0 /* EnrollmentPresenter.swift in Sources */,
 				4353E2A820D6B59D003441C0 /* SearchCollectionViewCell.swift in Sources */,
+				4353E2BD20D6C1EF003441C0 /* AdRepository.swift in Sources */,
 				4353E1E320D4F8F7003441C0 /* LoginRouter.swift in Sources */,
 				4353E1D220D4F8BE003441C0 /* Button.swift in Sources */,
 				4353E29920D6AE7A003441C0 /* BadgeBarButtonItem.swift in Sources */,
