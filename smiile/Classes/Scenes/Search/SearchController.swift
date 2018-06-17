@@ -41,6 +41,7 @@ class SearchController : BaseViewController, SearchIntents {
         super.viewDidLoad()
         presenter.attach()
         setupView()
+        title = "Recherche"
     }
     
     override func setupTabbar() {
