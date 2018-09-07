@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4339CE4A21426D5A00333A2D /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4339CE4921426D5A00333A2D /* CollectionViewCell.swift */; };
 		4353E17C20D4F3D5003441C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4353E17B20D4F3D5003441C0 /* AppDelegate.swift */; };
 		4353E18320D4F3D7003441C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4353E18220D4F3D7003441C0 /* Assets.xcassets */; };
 		4353E18620D4F3D7003441C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4353E18420D4F3D7003441C0 /* LaunchScreen.storyboard */; };
@@ -26,7 +27,6 @@
 		4353E1E420D4F8F7003441C0 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4353E1DF20D4F8F7003441C0 /* LoginController.swift */; };
 		4353E1E520D4F8F7003441C0 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4353E1E020D4F8F7003441C0 /* LoginInteractor.swift */; };
 		4353E1E620D4F8F7003441C0 /* LoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4353E1E120D4F8F7003441C0 /* LoginController.xib */; };
-		4353E1EA20D4F95E003441C0 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4353E1E920D4F95E003441C0 /* CollectionViewCell.swift */; };
 		4353E1EC20D4F974003441C0 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4353E1EB20D4F974003441C0 /* Style.swift */; };
 		4353E1F620D4F9AD003441C0 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4353E1EF20D4F9AC003441C0 /* StringExtension.swift */; };
 		4353E1F720D4F9AD003441C0 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4353E1F020D4F9AC003441C0 /* UIColorExtension.swift */; };
@@ -137,6 +137,7 @@
 /* Begin PBXFileReference section */
 		1105B2558A9DA91C12BC476F /* Pods_smiileTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_smiileTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		172380A8FDCCEB5E0F95C7A4 /* Pods-smiile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-smiile.release.xcconfig"; path = "Pods/Target Support Files/Pods-smiile/Pods-smiile.release.xcconfig"; sourceTree = "<group>"; };
+		4339CE4921426D5A00333A2D /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		4353E17820D4F3D5003441C0 /* smiile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = smiile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4353E17B20D4F3D5003441C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4353E18220D4F3D7003441C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -162,7 +163,6 @@
 		4353E1DF20D4F8F7003441C0 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		4353E1E020D4F8F7003441C0 /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
 		4353E1E120D4F8F7003441C0 /* LoginController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginController.xib; sourceTree = "<group>"; };
-		4353E1E920D4F95E003441C0 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CollectionViewCell.swift; path = ../../../../../travelnight/travelnight/Classes/UI/Subclasses/CollectionViewCell.swift; sourceTree = "<group>"; };
 		4353E1EB20D4F974003441C0 /* Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		4353E1EF20D4F9AC003441C0 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		4353E1F020D4F9AC003441C0 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
@@ -411,7 +411,7 @@
 				4353E29820D6AE7A003441C0 /* BadgeBarButtonItem.swift */,
 				4353E1C820D4F8BD003441C0 /* Button.swift */,
 				4353E1C920D4F8BD003441C0 /* CollectionReusableView.swift */,
-				4353E1E920D4F95E003441C0 /* CollectionViewCell.swift */,
+				4339CE4921426D5A00333A2D /* CollectionViewCell.swift */,
 				4353E1CF20D4F8BE003441C0 /* ImageView.swift */,
 				4353E1D020D4F8BE003441C0 /* Label.swift */,
 				4353E1CE20D4F8BE003441C0 /* NibView.swift */,
@@ -948,6 +948,7 @@
 				4353E1F920D4F9AD003441C0 /* UIView+extensions.swift in Sources */,
 				4353E1F720D4F9AD003441C0 /* UIColorExtension.swift in Sources */,
 				4353E29220D69B30003441C0 /* SearchInteractor.swift in Sources */,
+				4339CE4A21426D5A00333A2D /* CollectionViewCell.swift in Sources */,
 				4353E2C820D6F574003441C0 /* RequestHelpController.swift in Sources */,
 				4353E1D820D4F8BE003441C0 /* NibView.swift in Sources */,
 				4353E27120D69A0C003441C0 /* WantedInteractor.swift in Sources */,
@@ -972,7 +973,6 @@
 				4353E29120D69B30003441C0 /* SearchController.swift in Sources */,
 				4353E1E520D4F8F7003441C0 /* LoginInteractor.swift in Sources */,
 				4353E2A320D6B04D003441C0 /* MailboxInteractor.swift in Sources */,
-				4353E1EA20D4F95E003441C0 /* CollectionViewCell.swift in Sources */,
 				4353E27C20D69AA4003441C0 /* RequestController.swift in Sources */,
 				4353E23120D544C3003441C0 /* EnrollmentEmailPasswordRouter.swift in Sources */,
 				4353E2B220D6B7DB003441C0 /* AddressRepository.swift in Sources */,
